@@ -754,3 +754,215 @@
 1770071359: Saving in-memory database to /mosquitto/data//mosquitto.db.
 1770071376: mosquitto version 2.1.0 terminating
 1770071376: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770073998: mosquitto version 2.1.0 starting
+1770073998: Config loaded from /mosquitto/config/mosquitto.conf.
+1770073998: Bridge support available.
+1770073998: Persistence support available.
+1770073998: TLS support available.
+1770073998: TLS-PSK support available.
+1770073998: Websockets support available.
+1770073998: Warning: File /mosquitto/config/passwd has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/passwd`.
+
+1770073998: Warning: File /mosquitto/config/passwd owner is not mosquitto. Future versions will refuse to load this file.To fix this, use `chown mosquitto /mosquitto/config/passwd`.
+
+1770073998: Warning: File /mosquitto/config/passwd group is not mosquitto. Future versions will refuse to load this file.
+
+1770073998: Plugin builtin-security has registered to receive 'basic-auth' events.
+1770073998: Opening ipv4 listen socket on port 1883.
+1770073998: Opening ipv6 listen socket on port 1883.
+1770073998: Opening ipv4 listen socket on port 9001.
+1770073998: Opening ipv6 listen socket on port 9001.
+1770073998: mosquitto version 2.1.0 running
+1770074053: mosquitto version 2.1.0 terminating
+1770074053: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770074359: mosquitto version 2.1.0 starting
+1770074359: Config loaded from /mosquitto/config/mosquitto.conf.
+1770074359: Bridge support available.
+1770074359: Persistence support available.
+1770074359: TLS support available.
+1770074359: TLS-PSK support available.
+1770074359: Websockets support available.
+1770074359: Warning: File /mosquitto/config/passwd has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/passwd`.
+
+1770074359: Warning: File /mosquitto/config/passwd owner is not mosquitto. Future versions will refuse to load this file.To fix this, use `chown mosquitto /mosquitto/config/passwd`.
+
+1770074359: Warning: File /mosquitto/config/passwd group is not mosquitto. Future versions will refuse to load this file.
+
+1770074359: Plugin builtin-security has registered to receive 'basic-auth' events.
+1770074359: Opening ipv4 listen socket on port 1883.
+1770074359: Opening ipv6 listen socket on port 1883.
+1770074359: Opening ipv4 listen socket on port 9001.
+1770074359: Opening ipv6 listen socket on port 9001.
+1770074359: mosquitto version 2.1.0 running
+1770074370: New connection from 172.18.0.1:45130 on port 1883.
+1770074370: Client tvId-consumer disconnected, not authorised.
+1770074371: New connection from 172.18.0.1:45136 on port 1883.
+1770074371: Client tvId-consumer disconnected, not authorised.
+1770074372: New connection from 172.18.0.1:45150 on port 1883.
+1770074372: Client tvId-consumer disconnected, not authorised.
+1770074373: New connection from 172.18.0.1:45158 on port 1883.
+1770074373: Client tvId-consumer disconnected, not authorised.
+1770074374: New connection from 172.18.0.1:45166 on port 1883.
+1770074374: Client tvId-consumer disconnected, not authorised.
+1770074375: New connection from 172.18.0.1:45176 on port 1883.
+1770074375: Client tvId-consumer disconnected, not authorised.
+1770074376: New connection from 172.18.0.1:45180 on port 1883.
+1770074376: Client tvId-consumer disconnected, not authorised.
+1770074377: New connection from 172.18.0.1:45184 on port 1883.
+1770074377: Client tvId-consumer disconnected, not authorised.
+1770074378: New connection from 172.18.0.1:45190 on port 1883.
+1770074378: Client tvId-consumer disconnected, not authorised.
+1770074379: New connection from 172.18.0.1:45194 on port 1883.
+1770074379: Client tvId-consumer disconnected, not authorised.
+1770074380: New connection from 172.18.0.1:59394 on port 1883.
+1770074380: Client tvId-consumer disconnected, not authorised.
+1770074381: New connection from 172.18.0.1:59406 on port 1883.
+1770074381: Client tvId-consumer disconnected, not authorised.
+1770074382: New connection from 172.18.0.1:59416 on port 1883.
+1770074382: Client tvId-consumer disconnected, not authorised.
+1770074383: New connection from 172.18.0.1:59420 on port 1883.
+1770074383: Client tvId-consumer disconnected, not authorised.
+1770074384: New connection from 172.18.0.1:59432 on port 1883.
+1770074384: Client tvId-consumer disconnected, not authorised.
+1770074385: New connection from 172.18.0.1:59444 on port 1883.
+1770074385: Client tvId-consumer disconnected, not authorised.
+1770074386: New connection from 172.18.0.1:59456 on port 1883.
+1770074386: Client tvId-consumer disconnected, not authorised.
+1770074387: New connection from 172.18.0.1:59470 on port 1883.
+1770074387: Client tvId-consumer disconnected, not authorised.
+1770074404: New connection from 172.18.0.1:55984 on port 1883.
+1770074404: New connection from 172.18.0.1:55990 on port 1883.
+1770074404: New connection from 172.18.0.1:55998 on port 1883.
+1770074404: New connection from 172.18.0.1:56000 on port 1883.
+1770074404: New connection from 172.18.0.1:56008 on port 1883.
+1770074404: Client tv-001 disconnected, not authorised.
+1770074404: Client tv-002 disconnected, not authorised.
+1770074404: Client tv-003 disconnected, not authorised.
+1770074404: Client tv-004 disconnected, not authorised.
+1770074404: Client tv-005 disconnected, not authorised.
+1770074405: New connection from 172.18.0.1:56010 on port 1883.
+1770074405: New connection from 172.18.0.1:56016 on port 1883.
+1770074405: New connection from 172.18.0.1:56026 on port 1883.
+1770074405: New connection from 172.18.0.1:56040 on port 1883.
+1770074405: New connection from 172.18.0.1:56046 on port 1883.
+1770074405: Client tv-003 disconnected, not authorised.
+1770074405: Client tv-002 disconnected, not authorised.
+1770074405: Client tv-001 disconnected, not authorised.
+1770074405: Client tv-005 disconnected, not authorised.
+1770074405: Client tv-004 disconnected, not authorised.
+1770074406: New connection from 172.18.0.1:56052 on port 1883.
+1770074406: New connection from 172.18.0.1:56054 on port 1883.
+1770074406: New connection from 172.18.0.1:56058 on port 1883.
+1770074406: New connection from 172.18.0.1:56070 on port 1883.
+1770074406: Client tv-002 disconnected, not authorised.
+1770074406: New connection from 172.18.0.1:56072 on port 1883.
+1770074406: Client tv-003 disconnected, not authorised.
+1770074406: Client tv-005 disconnected, not authorised.
+1770074406: Client tv-001 disconnected, not authorised.
+1770074406: Client tv-004 disconnected, not authorised.
+1770074407: New connection from 172.18.0.1:56076 on port 1883.
+1770074407: New connection from 172.18.0.1:56086 on port 1883.
+1770074407: New connection from 172.18.0.1:56102 on port 1883.
+1770074407: New connection from 172.18.0.1:56106 on port 1883.
+1770074407: Client tv-002 disconnected, not authorised.
+1770074407: Client tv-001 disconnected, not authorised.
+1770074407: Client tv-005 disconnected, not authorised.
+1770074407: New connection from 172.18.0.1:56116 on port 1883.
+1770074407: Client tv-003 disconnected, not authorised.
+1770074407: Client tv-004 disconnected, not authorised.
+1770074408: New connection from 172.18.0.1:56118 on port 1883.
+1770074408: Client tv-002 disconnected, not authorised.
+1770074408: New connection from 172.18.0.1:56122 on port 1883.
+1770074408: New connection from 172.18.0.1:56138 on port 1883.
+1770074408: New connection from 172.18.0.1:56154 on port 1883.
+1770074408: New connection from 172.18.0.1:56162 on port 1883.
+1770074408: Client tv-003 disconnected, not authorised.
+1770074408: Client tv-005 disconnected, not authorised.
+1770074408: Client tv-001 disconnected, not authorised.
+1770074408: Client tv-004 disconnected, not authorised.
+1770074409: New connection from 172.18.0.1:56984 on port 1883.
+1770074409: New connection from 172.18.0.1:56998 on port 1883.
+1770074409: New connection from 172.18.0.1:57014 on port 1883.
+1770074409: Client tv-002 disconnected, not authorised.
+1770074409: New connection from 172.18.0.1:57028 on port 1883.
+1770074409: Client tv-001 disconnected, not authorised.
+1770074409: Client tv-005 disconnected, not authorised.
+1770074409: New connection from 172.18.0.1:57034 on port 1883.
+1770074409: Client tv-003 disconnected, not authorised.
+1770074409: Client tv-004 disconnected, not authorised.
+1770074410: New connection from 172.18.0.1:57048 on port 1883.
+1770074410: New connection from 172.18.0.1:57058 on port 1883.
+1770074410: New connection from 172.18.0.1:57060 on port 1883.
+1770074410: New connection from 172.18.0.1:57062 on port 1883.
+1770074410: Client tv-002 disconnected, not authorised.
+1770074410: Client tv-001 disconnected, not authorised.
+1770074410: New connection from 172.18.0.1:57074 on port 1883.
+1770074410: Client tv-003 disconnected, not authorised.
+1770074410: Client tv-005 disconnected, not authorised.
+1770074410: Client tv-004 disconnected, not authorised.
+1770074411: New connection from 172.18.0.1:57080 on port 1883.
+1770074411: New connection from 172.18.0.1:57084 on port 1883.
+1770074411: New connection from 172.18.0.1:57100 on port 1883.
+1770074411: New connection from 172.18.0.1:57108 on port 1883.
+1770074411: Client tv-002 disconnected, not authorised.
+1770074411: Client tv-001 disconnected, not authorised.
+1770074411: Client tv-005 disconnected, not authorised.
+1770074411: Client tv-003 disconnected, not authorised.
+1770074411: New connection from 172.18.0.1:57110 on port 1883.
+1770074411: Client tv-004 disconnected, not authorised.
+1770074412: New connection from 172.18.0.1:57120 on port 1883.
+1770074412: New connection from 172.18.0.1:57136 on port 1883.
+1770074412: New connection from 172.18.0.1:57152 on port 1883.
+1770074412: Client tv-005 disconnected, not authorised.
+1770074412: New connection from 172.18.0.1:57168 on port 1883.
+1770074412: Client tv-001 disconnected, not authorised.
+1770074412: Client tv-002 disconnected, not authorised.
+1770074412: Client tv-003 disconnected, not authorised.
+1770074412: New connection from 172.18.0.1:57174 on port 1883.
+1770074412: Client tv-004 disconnected, not authorised.
+1770074413: New connection from 172.18.0.1:57184 on port 1883.
+1770074413: New connection from 172.18.0.1:57186 on port 1883.
+1770074413: New connection from 172.18.0.1:57200 on port 1883.
+1770074413: New connection from 172.18.0.1:57208 on port 1883.
+1770074413: New connection from 172.18.0.1:57212 on port 1883.
+1770074413: Client tv-005 disconnected, not authorised.
+1770074413: Client tv-003 disconnected, not authorised.
+1770074413: Client tv-001 disconnected, not authorised.
+1770074413: Client tv-002 disconnected, not authorised.
+1770074413: Client tv-004 disconnected, not authorised.
+1770074506: New connection from ::1:53424 on port 1883.
+1770074506: Client auto-5D3776D9-F869-F9A0-12A6-FFE87A2934D6 disconnected, not authorised.
+1770074583: mosquitto version 2.1.0 terminating
+1770074583: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770074590: mosquitto version 2.1.0 starting
+1770074590: Config loaded from /mosquitto/config/mosquitto.conf.
+1770074590: Bridge support available.
+1770074590: Persistence support available.
+1770074590: TLS support available.
+1770074590: TLS-PSK support available.
+1770074590: Websockets support available.
+1770074590: Warning: File /mosquitto/config/passwd has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/passwd`.
+
+1770074590: Warning: File /mosquitto/config/passwd owner is not mosquitto. Future versions will refuse to load this file.To fix this, use `chown mosquitto /mosquitto/config/passwd`.
+
+1770074590: Warning: File /mosquitto/config/passwd group is not mosquitto. Future versions will refuse to load this file.
+
+1770074590: Plugin builtin-security has registered to receive 'basic-auth' events.
+1770074590: Opening ipv4 listen socket on port 1883.
+1770074590: Opening ipv6 listen socket on port 1883.
+1770074590: Opening ipv4 listen socket on port 9001.
+1770074590: Opening ipv6 listen socket on port 9001.
+1770074590: mosquitto version 2.1.0 running
+1770074610: New connection from 172.18.0.1:49356 on port 1883.
+1770074610: Client mqtt-explorer-ae607cd6 disconnected, not authorised.
+1770074611: New connection from 172.18.0.1:49370 on port 1883.
+1770074611: Client mqtt-explorer-ae607cd6 disconnected, not authorised.
+1770074612: New connection from 172.18.0.1:49384 on port 1883.
+1770074612: Client mqtt-explorer-ae607cd6 disconnected, not authorised.
+1770074612: New connection from 172.18.0.1:49386 on port 1883.
+1770074612: Client mqtt-explorer-ae607cd6 disconnected, not authorised.
+1770074618: mosquitto version 2.1.0 terminating
+1770074618: Saving in-memory database to /mosquitto/data//mosquitto.db.

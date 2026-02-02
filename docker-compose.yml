@@ -4,9 +4,7 @@ services:
     container_name: mosquitto
     restart: unless-stopped
     ports:
-      - "1883:1883"    # MQTT
-      - "8883:8883"    # MQTTS (secure)
-      - "9001:9001"    # WebSockets
+      - "1883:1883"
     volumes:
       - ./mosquitto/config:/mosquitto/config
       - ./mosquitto/data:/mosquitto/data
@@ -16,3 +14,8 @@ services:
     command: npm run build && npm start
     depends_on:
       - mosquitto
+  consumer:
+    build: ./consumer
+    command: npm run build && npm start
+    depends_on:
+      - client
