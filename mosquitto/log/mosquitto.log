@@ -1,0 +1,12 @@
+1770058753: mosquitto version 2.1.0 starting
+1770058753: Config loaded from /mosquitto/config/mosquitto.conf.
+1770058753: Bridge support available.
+1770058753: Persistence support available.
+1770058753: TLS support available.
+1770058753: TLS-PSK support available.
+1770058753: Websockets support available.
+1770058753: Opening ipv4 listen socket on port 1883.
+1770058753: Opening ipv6 listen socket on port 1883.
+1770058753: Opening ipv4 listen socket on port 9001.
+1770058753: Opening ipv6 listen socket on port 9001.
+1770058753: mosquitto version 2.1.0 running
