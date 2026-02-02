@@ -11,3 +11,8 @@ services:
       - ./mosquitto/config:/mosquitto/config
       - ./mosquitto/data:/mosquitto/data
       - ./mosquitto/log:/mosquitto/log
+  client:
+    build: ./client
+    command: npm run build && npm start
+    depends_on:
+      - mosquitto

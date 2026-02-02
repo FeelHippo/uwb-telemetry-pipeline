@@ -33,3 +33,13 @@ sudo docker logs -f mosquitto
 ```
 
 To make sure everything is properly set up, use [MQTT Explorer](https://mqtt-explorer.com/) to test connection and messaging.
+
+Testing via Docker:
+
+```bash
+# Subscribe using the container
+docker exec -it mosquitto mosquitto_sub -h localhost -t tv-001
+
+# Publish using the container
+docker exec -it mosquitto mosquitto_pub -h localhost -t tv-001 -m "Container message"
+```

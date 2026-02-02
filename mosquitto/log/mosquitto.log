@@ -10,3 +10,747 @@
 1770058753: Opening ipv4 listen socket on port 9001.
 1770058753: Opening ipv6 listen socket on port 9001.
 1770058753: mosquitto version 2.1.0 running
+1770060553: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770062354: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770064155: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770065956: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770067757: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770068754: New connection from 172.18.0.1:37592 on port 1883.
+1770068754: New client connected from 172.18.0.1:37592 as mqtt-explorer-ae607cd6 (p4, c1, k60).
+1770068776: Client mqtt-explorer-ae607cd6 disconnected.
+1770068832: New connection from 172.18.0.1:36270 on port 1883.
+1770068832: New client connected from 172.18.0.1:36270 as mqtt-explorer-ae607cd6 (p4, c1, k60, u'feelhippo').
+1770068843: Client mqtt-explorer-ae607cd6 disconnected.
+1770068886: New connection from 172.18.0.1:38836 on port 1883.
+1770068886: New client connected from 172.18.0.1:38836 as mqtt-explorer-ae607cd6 (p4, c1, k60, u'feelhippo').
+1770068963: Client mqtt-explorer-ae607cd6 disconnected.
+1770069017: New connection from 172.18.0.1:46054 on port 1883.
+1770069017: New client connected from 172.18.0.1:46054 as mqtt-explorer-ae607cd6 (p4, c1, k60, u'feelhippo').
+1770069128: New connection from ::1:47200 on port 1883.
+1770069128: New client connected from ::1:47200 as auto-EEBAFC13-1074-0D9D-7E15-A621F054407E (p4, c1, k60).
+1770069181: New connection from ::1:54366 on port 1883.
+1770069181: New client connected from ::1:54366 as auto-EDDB0A78-A91F-AEC0-04B2-15DC4D155C43 (p4, c1, k60).
+1770069205: New connection from ::1:32794 on port 1883.
+1770069205: New client connected from ::1:32794 as auto-F27C346E-C7B9-FC29-1476-5F04180B5CAA (p4, c1, k60).
+1770069205: Client auto-F27C346E-C7B9-FC29-1476-5F04180B5CAA disconnected.
+1770069558: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770069971: New connection from 172.18.0.1:53456 on port 1883.
+1770069971: New client connected from 172.18.0.1:53456 as tv-001 (p4, c1, k60).
+1770069979: Client tv-001 closed its connection.
+1770070001: New connection from 172.18.0.1:44276 on port 1883.
+1770070001: New client connected from 172.18.0.1:44276 as tv-001 (p4, c1, k60).
+1770070005: Client tv-001 closed its connection.
+1770070185: New connection from 172.18.0.1:44448 on port 1883.
+1770070185: New connection from 172.18.0.1:44454 on port 1883.
+1770070185: New connection from 172.18.0.1:44470 on port 1883.
+1770070185: New connection from 172.18.0.1:44486 on port 1883.
+1770070185: New connection from 172.18.0.1:44496 on port 1883.
+1770070185: New client connected from 172.18.0.1:44448 as tv-00undefined (p4, c1, k60).
+1770070185: Client tv-00undefined disconnected, session taken over.
+1770070185: New client connected from 172.18.0.1:44470 as tv-00undefined (p4, c1, k60).
+1770070185: Client tv-00undefined disconnected, session taken over.
+1770070185: New client connected from 172.18.0.1:44486 as tv-00undefined (p4, c1, k60).
+1770070185: Client tv-00undefined disconnected, session taken over.
+1770070185: New client connected from 172.18.0.1:44454 as tv-00undefined (p4, c1, k60).
+1770070185: Client tv-00undefined disconnected, session taken over.
+1770070185: New client connected from 172.18.0.1:44496 as tv-00undefined (p4, c1, k60).
+1770070186: New connection from 172.18.0.1:44506 on port 1883.
+1770070186: New connection from 172.18.0.1:44514 on port 1883.
+1770070186: Client tv-00undefined disconnected, session taken over.
+1770070186: New client connected from 172.18.0.1:44514 as tv-00undefined (p4, c1, k60).
+1770070186: New connection from 172.18.0.1:44520 on port 1883.
+1770070186: New connection from 172.18.0.1:44536 on port 1883.
+1770070186: Client tv-00undefined disconnected, session taken over.
+1770070186: New client connected from 172.18.0.1:44506 as tv-00undefined (p4, c1, k60).
+1770070186: Client tv-00undefined disconnected, session taken over.
+1770070186: New client connected from 172.18.0.1:44520 as tv-00undefined (p4, c1, k60).
+1770070186: Client tv-00undefined disconnected, session taken over.
+1770070186: New client connected from 172.18.0.1:44536 as tv-00undefined (p4, c1, k60).
+1770070187: New connection from 172.18.0.1:44548 on port 1883.
+1770070187: Client tv-00undefined disconnected, session taken over.
+1770070187: New client connected from 172.18.0.1:44548 as tv-00undefined (p4, c1, k60).
+1770070187: New connection from 172.18.0.1:44560 on port 1883.
+1770070187: Client tv-00undefined disconnected, session taken over.
+1770070187: New client connected from 172.18.0.1:44560 as tv-00undefined (p4, c1, k60).
+1770070187: New connection from 172.18.0.1:44570 on port 1883.
+1770070187: New connection from 172.18.0.1:44584 on port 1883.
+1770070187: Client tv-00undefined disconnected, session taken over.
+1770070187: New client connected from 172.18.0.1:44570 as tv-00undefined (p4, c1, k60).
+1770070187: Client tv-00undefined disconnected, session taken over.
+1770070187: New client connected from 172.18.0.1:44584 as tv-00undefined (p4, c1, k60).
+1770070188: New connection from 172.18.0.1:44598 on port 1883.
+1770070188: Client tv-00undefined disconnected, session taken over.
+1770070188: New client connected from 172.18.0.1:44598 as tv-00undefined (p4, c1, k60).
+1770070188: New connection from 172.18.0.1:44608 on port 1883.
+1770070188: Client tv-00undefined disconnected, session taken over.
+1770070188: New client connected from 172.18.0.1:44608 as tv-00undefined (p4, c1, k60).
+1770070188: New connection from 172.18.0.1:44622 on port 1883.
+1770070188: New connection from 172.18.0.1:44624 on port 1883.
+1770070188: Client tv-00undefined disconnected, session taken over.
+1770070188: New client connected from 172.18.0.1:44622 as tv-00undefined (p4, c1, k60).
+1770070188: Client tv-00undefined disconnected, session taken over.
+1770070188: New client connected from 172.18.0.1:44624 as tv-00undefined (p4, c1, k60).
+1770070189: Client tv-00undefined closed its connection.
+1770070277: New connection from 172.18.0.1:42848 on port 1883.
+1770070277: New connection from 172.18.0.1:42850 on port 1883.
+1770070277: New connection from 172.18.0.1:42862 on port 1883.
+1770070277: New connection from 172.18.0.1:42874 on port 1883.
+1770070277: New connection from 172.18.0.1:42888 on port 1883.
+1770070277: New client connected from 172.18.0.1:42848 as tv-00undefined (p4, c1, k60).
+1770070277: Client tv-00undefined disconnected, session taken over.
+1770070277: New client connected from 172.18.0.1:42850 as tv-00undefined (p4, c1, k60).
+1770070277: Client tv-00undefined disconnected, session taken over.
+1770070277: New client connected from 172.18.0.1:42862 as tv-00undefined (p4, c1, k60).
+1770070277: Client tv-00undefined disconnected, session taken over.
+1770070277: New client connected from 172.18.0.1:42874 as tv-00undefined (p4, c1, k60).
+1770070277: Client tv-00undefined disconnected, session taken over.
+1770070277: New client connected from 172.18.0.1:42888 as tv-00undefined (p4, c1, k60).
+1770070278: New connection from 172.18.0.1:42896 on port 1883.
+1770070278: Client tv-00undefined disconnected, session taken over.
+1770070278: New client connected from 172.18.0.1:42896 as tv-00undefined (p4, c1, k60).
+1770070278: New connection from 172.18.0.1:42924 on port 1883.
+1770070278: New connection from 172.18.0.1:42910 on port 1883.
+1770070278: New connection from 172.18.0.1:42928 on port 1883.
+1770070278: Client tv-00undefined disconnected, session taken over.
+1770070278: New client connected from 172.18.0.1:42924 as tv-00undefined (p4, c1, k60).
+1770070278: Client tv-00undefined disconnected, session taken over.
+1770070278: New client connected from 172.18.0.1:42910 as tv-00undefined (p4, c1, k60).
+1770070278: Client tv-00undefined disconnected, session taken over.
+1770070278: New client connected from 172.18.0.1:42928 as tv-00undefined (p4, c1, k60).
+1770070279: New connection from 172.18.0.1:42938 on port 1883.
+1770070279: Client tv-00undefined disconnected, session taken over.
+1770070279: New client connected from 172.18.0.1:42938 as tv-00undefined (p4, c1, k60).
+1770070279: New connection from 172.18.0.1:42948 on port 1883.
+1770070279: Client tv-00undefined disconnected, session taken over.
+1770070279: New client connected from 172.18.0.1:42948 as tv-00undefined (p4, c1, k60).
+1770070279: New connection from 172.18.0.1:42954 on port 1883.
+1770070279: New connection from 172.18.0.1:42964 on port 1883.
+1770070279: Client tv-00undefined disconnected, session taken over.
+1770070279: New client connected from 172.18.0.1:42954 as tv-00undefined (p4, c1, k60).
+1770070279: Client tv-00undefined disconnected, session taken over.
+1770070279: New client connected from 172.18.0.1:42964 as tv-00undefined (p4, c1, k60).
+1770070280: New connection from 172.18.0.1:52476 on port 1883.
+1770070280: Client tv-00undefined disconnected, session taken over.
+1770070280: New client connected from 172.18.0.1:52476 as tv-00undefined (p4, c1, k60).
+1770070280: New connection from 172.18.0.1:52490 on port 1883.
+1770070280: Client tv-00undefined disconnected, session taken over.
+1770070280: New client connected from 172.18.0.1:52490 as tv-00undefined (p4, c1, k60).
+1770070280: New connection from 172.18.0.1:52494 on port 1883.
+1770070280: Client tv-00undefined disconnected, session taken over.
+1770070280: New client connected from 172.18.0.1:52494 as tv-00undefined (p4, c1, k60).
+1770070280: New connection from 172.18.0.1:52510 on port 1883.
+1770070280: Client tv-00undefined disconnected, session taken over.
+1770070280: New client connected from 172.18.0.1:52510 as tv-00undefined (p4, c1, k60).
+1770070281: New connection from 172.18.0.1:52524 on port 1883.
+1770070281: Client tv-00undefined disconnected, session taken over.
+1770070281: New client connected from 172.18.0.1:52524 as tv-00undefined (p4, c1, k60).
+1770070281: New connection from 172.18.0.1:52528 on port 1883.
+1770070281: Client tv-00undefined disconnected, session taken over.
+1770070281: New client connected from 172.18.0.1:52528 as tv-00undefined (p4, c1, k60).
+1770070281: New connection from 172.18.0.1:52540 on port 1883.
+1770070281: Client tv-00undefined disconnected, session taken over.
+1770070281: New client connected from 172.18.0.1:52540 as tv-00undefined (p4, c1, k60).
+1770070281: New connection from 172.18.0.1:52556 on port 1883.
+1770070281: Client tv-00undefined disconnected, session taken over.
+1770070281: New client connected from 172.18.0.1:52556 as tv-00undefined (p4, c1, k60).
+1770070282: New connection from 172.18.0.1:52558 on port 1883.
+1770070282: Client tv-00undefined disconnected, session taken over.
+1770070282: New client connected from 172.18.0.1:52558 as tv-00undefined (p4, c1, k60).
+1770070282: New connection from 172.18.0.1:52568 on port 1883.
+1770070282: Client tv-00undefined disconnected, session taken over.
+1770070282: New client connected from 172.18.0.1:52568 as tv-00undefined (p4, c1, k60).
+1770070282: New connection from 172.18.0.1:52584 on port 1883.
+1770070282: Client tv-00undefined disconnected, session taken over.
+1770070282: New client connected from 172.18.0.1:52584 as tv-00undefined (p4, c1, k60).
+1770070282: New connection from 172.18.0.1:52586 on port 1883.
+1770070282: Client tv-00undefined disconnected, session taken over.
+1770070282: New client connected from 172.18.0.1:52586 as tv-00undefined (p4, c1, k60).
+1770070283: New connection from 172.18.0.1:52596 on port 1883.
+1770070283: Client tv-00undefined disconnected, session taken over.
+1770070283: New client connected from 172.18.0.1:52596 as tv-00undefined (p4, c1, k60).
+1770070283: New connection from 172.18.0.1:52602 on port 1883.
+1770070283: Client tv-00undefined disconnected, session taken over.
+1770070283: New client connected from 172.18.0.1:52602 as tv-00undefined (p4, c1, k60).
+1770070283: New connection from 172.18.0.1:52612 on port 1883.
+1770070283: Client tv-00undefined disconnected, session taken over.
+1770070283: New client connected from 172.18.0.1:52612 as tv-00undefined (p4, c1, k60).
+1770070283: New connection from 172.18.0.1:52624 on port 1883.
+1770070283: Client tv-00undefined disconnected, session taken over.
+1770070283: New client connected from 172.18.0.1:52624 as tv-00undefined (p4, c1, k60).
+1770070284: New connection from 172.18.0.1:52636 on port 1883.
+1770070284: Client tv-00undefined disconnected, session taken over.
+1770070284: New client connected from 172.18.0.1:52636 as tv-00undefined (p4, c1, k60).
+1770070284: New connection from 172.18.0.1:52648 on port 1883.
+1770070284: Client tv-00undefined disconnected, session taken over.
+1770070284: New client connected from 172.18.0.1:52648 as tv-00undefined (p4, c1, k60).
+1770070284: New connection from 172.18.0.1:52664 on port 1883.
+1770070284: Client tv-00undefined disconnected, session taken over.
+1770070284: New client connected from 172.18.0.1:52664 as tv-00undefined (p4, c1, k60).
+1770070284: New connection from 172.18.0.1:52674 on port 1883.
+1770070284: Client tv-00undefined disconnected, session taken over.
+1770070284: New client connected from 172.18.0.1:52674 as tv-00undefined (p4, c1, k60).
+1770070285: New connection from 172.18.0.1:52680 on port 1883.
+1770070285: Client tv-00undefined disconnected, session taken over.
+1770070285: New client connected from 172.18.0.1:52680 as tv-00undefined (p4, c1, k60).
+1770070285: New connection from 172.18.0.1:52682 on port 1883.
+1770070285: Client tv-00undefined disconnected, session taken over.
+1770070285: New client connected from 172.18.0.1:52682 as tv-00undefined (p4, c1, k60).
+1770070285: New connection from 172.18.0.1:52698 on port 1883.
+1770070285: Client tv-00undefined disconnected, session taken over.
+1770070285: New client connected from 172.18.0.1:52698 as tv-00undefined (p4, c1, k60).
+1770070285: New connection from 172.18.0.1:52710 on port 1883.
+1770070285: Client tv-00undefined disconnected, session taken over.
+1770070285: New client connected from 172.18.0.1:52710 as tv-00undefined (p4, c1, k60).
+1770070286: New connection from 172.18.0.1:52720 on port 1883.
+1770070286: Client tv-00undefined disconnected, session taken over.
+1770070286: New client connected from 172.18.0.1:52720 as tv-00undefined (p4, c1, k60).
+1770070286: New connection from 172.18.0.1:52732 on port 1883.
+1770070286: Client tv-00undefined disconnected, session taken over.
+1770070286: New client connected from 172.18.0.1:52732 as tv-00undefined (p4, c1, k60).
+1770070286: New connection from 172.18.0.1:52736 on port 1883.
+1770070286: Client tv-00undefined disconnected, session taken over.
+1770070286: New client connected from 172.18.0.1:52736 as tv-00undefined (p4, c1, k60).
+1770070286: New connection from 172.18.0.1:52744 on port 1883.
+1770070286: Client tv-00undefined disconnected, session taken over.
+1770070286: New client connected from 172.18.0.1:52744 as tv-00undefined (p4, c1, k60).
+1770070287: New connection from 172.18.0.1:52750 on port 1883.
+1770070287: Client tv-00undefined disconnected, session taken over.
+1770070287: New client connected from 172.18.0.1:52750 as tv-00undefined (p4, c1, k60).
+1770070287: New connection from 172.18.0.1:52758 on port 1883.
+1770070287: Client tv-00undefined disconnected, session taken over.
+1770070287: New client connected from 172.18.0.1:52758 as tv-00undefined (p4, c1, k60).
+1770070287: New connection from 172.18.0.1:52760 on port 1883.
+1770070287: Client tv-00undefined disconnected, session taken over.
+1770070287: New client connected from 172.18.0.1:52760 as tv-00undefined (p4, c1, k60).
+1770070287: New connection from 172.18.0.1:52768 on port 1883.
+1770070287: Client tv-00undefined disconnected, session taken over.
+1770070287: New client connected from 172.18.0.1:52768 as tv-00undefined (p4, c1, k60).
+1770070288: New connection from 172.18.0.1:52776 on port 1883.
+1770070288: Client tv-00undefined disconnected, session taken over.
+1770070288: New client connected from 172.18.0.1:52776 as tv-00undefined (p4, c1, k60).
+1770070288: New connection from 172.18.0.1:52790 on port 1883.
+1770070288: Client tv-00undefined disconnected, session taken over.
+1770070288: New client connected from 172.18.0.1:52790 as tv-00undefined (p4, c1, k60).
+1770070288: New connection from 172.18.0.1:52798 on port 1883.
+1770070288: Client tv-00undefined disconnected, session taken over.
+1770070288: New client connected from 172.18.0.1:52798 as tv-00undefined (p4, c1, k60).
+1770070288: New connection from 172.18.0.1:52802 on port 1883.
+1770070288: Client tv-00undefined disconnected, session taken over.
+1770070288: New client connected from 172.18.0.1:52802 as tv-00undefined (p4, c1, k60).
+1770070289: New connection from 172.18.0.1:52806 on port 1883.
+1770070289: Client tv-00undefined disconnected, session taken over.
+1770070289: New client connected from 172.18.0.1:52806 as tv-00undefined (p4, c1, k60).
+1770070289: New connection from 172.18.0.1:52820 on port 1883.
+1770070289: Client tv-00undefined disconnected, session taken over.
+1770070289: New client connected from 172.18.0.1:52820 as tv-00undefined (p4, c1, k60).
+1770070289: New connection from 172.18.0.1:52826 on port 1883.
+1770070289: Client tv-00undefined disconnected, session taken over.
+1770070289: New client connected from 172.18.0.1:52826 as tv-00undefined (p4, c1, k60).
+1770070289: New connection from 172.18.0.1:52828 on port 1883.
+1770070289: Client tv-00undefined disconnected, session taken over.
+1770070289: New client connected from 172.18.0.1:52828 as tv-00undefined (p4, c1, k60).
+1770070290: New connection from 172.18.0.1:35194 on port 1883.
+1770070290: Client tv-00undefined disconnected, session taken over.
+1770070290: New client connected from 172.18.0.1:35194 as tv-00undefined (p4, c1, k60).
+1770070290: New connection from 172.18.0.1:35210 on port 1883.
+1770070290: Client tv-00undefined disconnected, session taken over.
+1770070290: New client connected from 172.18.0.1:35210 as tv-00undefined (p4, c1, k60).
+1770070290: New connection from 172.18.0.1:35220 on port 1883.
+1770070290: Client tv-00undefined disconnected, session taken over.
+1770070290: New client connected from 172.18.0.1:35220 as tv-00undefined (p4, c1, k60).
+1770070290: New connection from 172.18.0.1:35234 on port 1883.
+1770070290: Client tv-00undefined disconnected, session taken over.
+1770070290: New client connected from 172.18.0.1:35234 as tv-00undefined (p4, c1, k60).
+1770070291: New connection from 172.18.0.1:35244 on port 1883.
+1770070291: Client tv-00undefined disconnected, session taken over.
+1770070291: New client connected from 172.18.0.1:35244 as tv-00undefined (p4, c1, k60).
+1770070291: New connection from 172.18.0.1:35256 on port 1883.
+1770070291: Client tv-00undefined disconnected, session taken over.
+1770070291: New client connected from 172.18.0.1:35256 as tv-00undefined (p4, c1, k60).
+1770070291: New connection from 172.18.0.1:35258 on port 1883.
+1770070291: Client tv-00undefined disconnected, session taken over.
+1770070291: New client connected from 172.18.0.1:35258 as tv-00undefined (p4, c1, k60).
+1770070291: New connection from 172.18.0.1:35264 on port 1883.
+1770070291: Client tv-00undefined disconnected, session taken over.
+1770070291: New client connected from 172.18.0.1:35264 as tv-00undefined (p4, c1, k60).
+1770070292: New connection from 172.18.0.1:35272 on port 1883.
+1770070292: Client tv-00undefined disconnected, session taken over.
+1770070292: New client connected from 172.18.0.1:35272 as tv-00undefined (p4, c1, k60).
+1770070292: New connection from 172.18.0.1:35280 on port 1883.
+1770070292: Client tv-00undefined disconnected, session taken over.
+1770070292: New client connected from 172.18.0.1:35280 as tv-00undefined (p4, c1, k60).
+1770070292: New connection from 172.18.0.1:35284 on port 1883.
+1770070292: Client tv-00undefined disconnected, session taken over.
+1770070292: New client connected from 172.18.0.1:35284 as tv-00undefined (p4, c1, k60).
+1770070292: New connection from 172.18.0.1:35298 on port 1883.
+1770070292: Client tv-00undefined disconnected, session taken over.
+1770070292: New client connected from 172.18.0.1:35298 as tv-00undefined (p4, c1, k60).
+1770070293: New connection from 172.18.0.1:35302 on port 1883.
+1770070293: Client tv-00undefined disconnected, session taken over.
+1770070293: New client connected from 172.18.0.1:35302 as tv-00undefined (p4, c1, k60).
+1770070293: New connection from 172.18.0.1:35304 on port 1883.
+1770070293: Client tv-00undefined disconnected, session taken over.
+1770070293: New client connected from 172.18.0.1:35304 as tv-00undefined (p4, c1, k60).
+1770070293: New connection from 172.18.0.1:35312 on port 1883.
+1770070293: Client tv-00undefined disconnected, session taken over.
+1770070293: New client connected from 172.18.0.1:35312 as tv-00undefined (p4, c1, k60).
+1770070293: New connection from 172.18.0.1:35322 on port 1883.
+1770070293: Client tv-00undefined disconnected, session taken over.
+1770070293: New client connected from 172.18.0.1:35322 as tv-00undefined (p4, c1, k60).
+1770070294: New connection from 172.18.0.1:35324 on port 1883.
+1770070294: Client tv-00undefined disconnected, session taken over.
+1770070294: New client connected from 172.18.0.1:35324 as tv-00undefined (p4, c1, k60).
+1770070294: New connection from 172.18.0.1:35328 on port 1883.
+1770070294: Client tv-00undefined disconnected, session taken over.
+1770070294: New client connected from 172.18.0.1:35328 as tv-00undefined (p4, c1, k60).
+1770070294: New connection from 172.18.0.1:35338 on port 1883.
+1770070294: Client tv-00undefined disconnected, session taken over.
+1770070294: New client connected from 172.18.0.1:35338 as tv-00undefined (p4, c1, k60).
+1770070294: New connection from 172.18.0.1:35352 on port 1883.
+1770070294: Client tv-00undefined disconnected, session taken over.
+1770070294: New client connected from 172.18.0.1:35352 as tv-00undefined (p4, c1, k60).
+1770070295: New connection from 172.18.0.1:35354 on port 1883.
+1770070295: Client tv-00undefined disconnected, session taken over.
+1770070295: New client connected from 172.18.0.1:35354 as tv-00undefined (p4, c1, k60).
+1770070295: New connection from 172.18.0.1:35358 on port 1883.
+1770070295: Client tv-00undefined disconnected, session taken over.
+1770070295: New client connected from 172.18.0.1:35358 as tv-00undefined (p4, c1, k60).
+1770070295: New connection from 172.18.0.1:35374 on port 1883.
+1770070295: Client tv-00undefined disconnected, session taken over.
+1770070295: New client connected from 172.18.0.1:35374 as tv-00undefined (p4, c1, k60).
+1770070295: New connection from 172.18.0.1:35386 on port 1883.
+1770070295: Client tv-00undefined disconnected, session taken over.
+1770070295: New client connected from 172.18.0.1:35386 as tv-00undefined (p4, c1, k60).
+1770070296: New connection from 172.18.0.1:35400 on port 1883.
+1770070296: Client tv-00undefined disconnected, session taken over.
+1770070296: New client connected from 172.18.0.1:35400 as tv-00undefined (p4, c1, k60).
+1770070296: New connection from 172.18.0.1:35414 on port 1883.
+1770070296: Client tv-00undefined disconnected, session taken over.
+1770070296: New client connected from 172.18.0.1:35414 as tv-00undefined (p4, c1, k60).
+1770070296: New connection from 172.18.0.1:35426 on port 1883.
+1770070296: Client tv-00undefined disconnected, session taken over.
+1770070296: New client connected from 172.18.0.1:35426 as tv-00undefined (p4, c1, k60).
+1770070296: New connection from 172.18.0.1:35428 on port 1883.
+1770070296: Client tv-00undefined disconnected, session taken over.
+1770070296: New client connected from 172.18.0.1:35428 as tv-00undefined (p4, c1, k60).
+1770070297: New connection from 172.18.0.1:35442 on port 1883.
+1770070297: Client tv-00undefined disconnected, session taken over.
+1770070297: New client connected from 172.18.0.1:35442 as tv-00undefined (p4, c1, k60).
+1770070297: New connection from 172.18.0.1:35450 on port 1883.
+1770070297: Client tv-00undefined disconnected, session taken over.
+1770070297: New client connected from 172.18.0.1:35450 as tv-00undefined (p4, c1, k60).
+1770070297: New connection from 172.18.0.1:35454 on port 1883.
+1770070297: Client tv-00undefined disconnected, session taken over.
+1770070297: New client connected from 172.18.0.1:35454 as tv-00undefined (p4, c1, k60).
+1770070297: New connection from 172.18.0.1:35466 on port 1883.
+1770070297: Client tv-00undefined disconnected, session taken over.
+1770070297: New client connected from 172.18.0.1:35466 as tv-00undefined (p4, c1, k60).
+1770070298: New connection from 172.18.0.1:35476 on port 1883.
+1770070298: Client tv-00undefined disconnected, session taken over.
+1770070298: New client connected from 172.18.0.1:35476 as tv-00undefined (p4, c1, k60).
+1770070298: New connection from 172.18.0.1:35478 on port 1883.
+1770070298: Client tv-00undefined disconnected, session taken over.
+1770070298: New client connected from 172.18.0.1:35478 as tv-00undefined (p4, c1, k60).
+1770070298: New connection from 172.18.0.1:35486 on port 1883.
+1770070298: Client tv-00undefined disconnected, session taken over.
+1770070298: New client connected from 172.18.0.1:35486 as tv-00undefined (p4, c1, k60).
+1770070298: New connection from 172.18.0.1:35494 on port 1883.
+1770070298: Client tv-00undefined disconnected, session taken over.
+1770070298: New client connected from 172.18.0.1:35494 as tv-00undefined (p4, c1, k60).
+1770070299: New connection from 172.18.0.1:35496 on port 1883.
+1770070299: Client tv-00undefined disconnected, session taken over.
+1770070299: New client connected from 172.18.0.1:35496 as tv-00undefined (p4, c1, k60).
+1770070299: New connection from 172.18.0.1:35498 on port 1883.
+1770070299: Client tv-00undefined disconnected, session taken over.
+1770070299: New client connected from 172.18.0.1:35498 as tv-00undefined (p4, c1, k60).
+1770070299: New connection from 172.18.0.1:35514 on port 1883.
+1770070299: Client tv-00undefined disconnected, session taken over.
+1770070299: New client connected from 172.18.0.1:35514 as tv-00undefined (p4, c1, k60).
+1770070299: New connection from 172.18.0.1:35528 on port 1883.
+1770070299: Client tv-00undefined disconnected, session taken over.
+1770070299: New client connected from 172.18.0.1:35528 as tv-00undefined (p4, c1, k60).
+1770070300: Client tv-00undefined closed its connection.
+1770070403: New connection from 172.18.0.1:57692 on port 1883.
+1770070403: New connection from 172.18.0.1:57694 on port 1883.
+1770070403: New connection from 172.18.0.1:57710 on port 1883.
+1770070403: New connection from 172.18.0.1:57712 on port 1883.
+1770070403: New connection from 172.18.0.1:57718 on port 1883.
+1770070403: New client connected from 172.18.0.1:57694 as tv-00undefined (p4, c1, k60).
+1770070403: Client tv-00undefined disconnected, session taken over.
+1770070403: New client connected from 172.18.0.1:57710 as tv-00undefined (p4, c1, k60).
+1770070403: Client tv-00undefined disconnected, session taken over.
+1770070403: New client connected from 172.18.0.1:57692 as tv-00undefined (p4, c1, k60).
+1770070403: Client tv-00undefined disconnected, session taken over.
+1770070403: New client connected from 172.18.0.1:57718 as tv-00undefined (p4, c1, k60).
+1770070403: Client tv-00undefined disconnected, session taken over.
+1770070403: New client connected from 172.18.0.1:57712 as tv-00undefined (p4, c1, k60).
+1770070404: New connection from 172.18.0.1:57732 on port 1883.
+1770070404: New connection from 172.18.0.1:57742 on port 1883.
+1770070404: New connection from 172.18.0.1:57754 on port 1883.
+1770070404: New connection from 172.18.0.1:57766 on port 1883.
+1770070404: Client tv-00undefined disconnected, session taken over.
+1770070404: New client connected from 172.18.0.1:57742 as tv-00undefined (p4, c1, k60).
+1770070404: Client tv-00undefined disconnected, session taken over.
+1770070404: New client connected from 172.18.0.1:57732 as tv-00undefined (p4, c1, k60).
+1770070404: Client tv-00undefined disconnected, session taken over.
+1770070404: New client connected from 172.18.0.1:57754 as tv-00undefined (p4, c1, k60).
+1770070404: Client tv-00undefined disconnected, session taken over.
+1770070404: New client connected from 172.18.0.1:57766 as tv-00undefined (p4, c1, k60).
+1770070405: New connection from 172.18.0.1:57776 on port 1883.
+1770070405: Client tv-00undefined disconnected, session taken over.
+1770070405: New client connected from 172.18.0.1:57776 as tv-00undefined (p4, c1, k60).
+1770070405: New connection from 172.18.0.1:57790 on port 1883.
+1770070405: Client tv-00undefined disconnected, session taken over.
+1770070405: New client connected from 172.18.0.1:57790 as tv-00undefined (p4, c1, k60).
+1770070405: New connection from 172.18.0.1:57802 on port 1883.
+1770070405: New connection from 172.18.0.1:57796 on port 1883.
+1770070405: Client tv-00undefined disconnected, session taken over.
+1770070405: New client connected from 172.18.0.1:57802 as tv-00undefined (p4, c1, k60).
+1770070405: Client tv-00undefined disconnected, session taken over.
+1770070405: New client connected from 172.18.0.1:57796 as tv-00undefined (p4, c1, k60).
+1770070406: New connection from 172.18.0.1:57810 on port 1883.
+1770070406: Client tv-00undefined disconnected, session taken over.
+1770070406: New client connected from 172.18.0.1:57810 as tv-00undefined (p4, c1, k60).
+1770070406: New connection from 172.18.0.1:57824 on port 1883.
+1770070406: New connection from 172.18.0.1:57826 on port 1883.
+1770070406: Client tv-00undefined disconnected, session taken over.
+1770070406: New client connected from 172.18.0.1:57824 as tv-00undefined (p4, c1, k60).
+1770070406: Client tv-00undefined disconnected, session taken over.
+1770070406: New client connected from 172.18.0.1:57826 as tv-00undefined (p4, c1, k60).
+1770070406: New connection from 172.18.0.1:57842 on port 1883.
+1770070406: Client tv-00undefined disconnected, session taken over.
+1770070406: New client connected from 172.18.0.1:57842 as tv-00undefined (p4, c1, k60).
+1770070407: New connection from 172.18.0.1:57848 on port 1883.
+1770070407: Client tv-00undefined disconnected, session taken over.
+1770070407: New client connected from 172.18.0.1:57848 as tv-00undefined (p4, c1, k60).
+1770070407: New connection from 172.18.0.1:57864 on port 1883.
+1770070407: Client tv-00undefined disconnected, session taken over.
+1770070407: New client connected from 172.18.0.1:57864 as tv-00undefined (p4, c1, k60).
+1770070407: New connection from 172.18.0.1:57866 on port 1883.
+1770070407: New connection from 172.18.0.1:57880 on port 1883.
+1770070407: Client tv-00undefined disconnected, session taken over.
+1770070407: New client connected from 172.18.0.1:57866 as tv-00undefined (p4, c1, k60).
+1770070407: Client tv-00undefined disconnected, session taken over.
+1770070407: New client connected from 172.18.0.1:57880 as tv-00undefined (p4, c1, k60).
+1770070408: New connection from 172.18.0.1:57882 on port 1883.
+1770070408: Client tv-00undefined disconnected, session taken over.
+1770070408: New client connected from 172.18.0.1:57882 as tv-00undefined (p4, c1, k60).
+1770070408: New connection from 172.18.0.1:57894 on port 1883.
+1770070408: Client tv-00undefined disconnected, session taken over.
+1770070408: New client connected from 172.18.0.1:57894 as tv-00undefined (p4, c1, k60).
+1770070408: New connection from 172.18.0.1:57906 on port 1883.
+1770070408: Client tv-00undefined disconnected, session taken over.
+1770070408: New client connected from 172.18.0.1:57906 as tv-00undefined (p4, c1, k60).
+1770070408: New connection from 172.18.0.1:57916 on port 1883.
+1770070408: Client tv-00undefined disconnected, session taken over.
+1770070408: New client connected from 172.18.0.1:57916 as tv-00undefined (p4, c1, k60).
+1770070409: New connection from 172.18.0.1:57932 on port 1883.
+1770070409: Client tv-00undefined disconnected, session taken over.
+1770070409: New client connected from 172.18.0.1:57932 as tv-00undefined (p4, c1, k60).
+1770070409: New connection from 172.18.0.1:57936 on port 1883.
+1770070409: Client tv-00undefined disconnected, session taken over.
+1770070409: New client connected from 172.18.0.1:57936 as tv-00undefined (p4, c1, k60).
+1770070409: New connection from 172.18.0.1:57938 on port 1883.
+1770070409: Client tv-00undefined disconnected, session taken over.
+1770070409: New client connected from 172.18.0.1:57938 as tv-00undefined (p4, c1, k60).
+1770070409: New connection from 172.18.0.1:57942 on port 1883.
+1770070409: Client tv-00undefined disconnected, session taken over.
+1770070409: New client connected from 172.18.0.1:57942 as tv-00undefined (p4, c1, k60).
+1770070410: New connection from 172.18.0.1:44588 on port 1883.
+1770070410: Client tv-00undefined disconnected, session taken over.
+1770070410: New client connected from 172.18.0.1:44588 as tv-00undefined (p4, c1, k60).
+1770070410: New connection from 172.18.0.1:44598 on port 1883.
+1770070410: Client tv-00undefined disconnected, session taken over.
+1770070410: New client connected from 172.18.0.1:44598 as tv-00undefined (p4, c1, k60).
+1770070410: New connection from 172.18.0.1:44614 on port 1883.
+1770070410: Client tv-00undefined disconnected, session taken over.
+1770070410: New client connected from 172.18.0.1:44614 as tv-00undefined (p4, c1, k60).
+1770070410: New connection from 172.18.0.1:44628 on port 1883.
+1770070410: Client tv-00undefined disconnected, session taken over.
+1770070410: New client connected from 172.18.0.1:44628 as tv-00undefined (p4, c1, k60).
+1770070411: New connection from 172.18.0.1:44642 on port 1883.
+1770070411: Client tv-00undefined disconnected, session taken over.
+1770070411: New client connected from 172.18.0.1:44642 as tv-00undefined (p4, c1, k60).
+1770070411: New connection from 172.18.0.1:44646 on port 1883.
+1770070411: Client tv-00undefined disconnected, session taken over.
+1770070411: New client connected from 172.18.0.1:44646 as tv-00undefined (p4, c1, k60).
+1770070411: New connection from 172.18.0.1:44658 on port 1883.
+1770070411: Client tv-00undefined disconnected, session taken over.
+1770070411: New client connected from 172.18.0.1:44658 as tv-00undefined (p4, c1, k60).
+1770070411: New connection from 172.18.0.1:44668 on port 1883.
+1770070411: Client tv-00undefined disconnected, session taken over.
+1770070411: New client connected from 172.18.0.1:44668 as tv-00undefined (p4, c1, k60).
+1770070412: New connection from 172.18.0.1:44672 on port 1883.
+1770070412: Client tv-00undefined disconnected, session taken over.
+1770070412: New client connected from 172.18.0.1:44672 as tv-00undefined (p4, c1, k60).
+1770070412: New connection from 172.18.0.1:44682 on port 1883.
+1770070412: Client tv-00undefined disconnected, session taken over.
+1770070412: New client connected from 172.18.0.1:44682 as tv-00undefined (p4, c1, k60).
+1770070412: New connection from 172.18.0.1:44686 on port 1883.
+1770070412: Client tv-00undefined disconnected, session taken over.
+1770070412: New client connected from 172.18.0.1:44686 as tv-00undefined (p4, c1, k60).
+1770070412: New connection from 172.18.0.1:44696 on port 1883.
+1770070412: Client tv-00undefined disconnected, session taken over.
+1770070412: New client connected from 172.18.0.1:44696 as tv-00undefined (p4, c1, k60).
+1770070413: New connection from 172.18.0.1:44710 on port 1883.
+1770070413: Client tv-00undefined disconnected, session taken over.
+1770070413: New client connected from 172.18.0.1:44710 as tv-00undefined (p4, c1, k60).
+1770070413: New connection from 172.18.0.1:44712 on port 1883.
+1770070413: Client tv-00undefined disconnected, session taken over.
+1770070413: New client connected from 172.18.0.1:44712 as tv-00undefined (p4, c1, k60).
+1770070413: New connection from 172.18.0.1:44714 on port 1883.
+1770070413: Client tv-00undefined disconnected, session taken over.
+1770070413: New client connected from 172.18.0.1:44714 as tv-00undefined (p4, c1, k60).
+1770070413: New connection from 172.18.0.1:44716 on port 1883.
+1770070413: Client tv-00undefined disconnected, session taken over.
+1770070413: New client connected from 172.18.0.1:44716 as tv-00undefined (p4, c1, k60).
+1770070414: New connection from 172.18.0.1:44728 on port 1883.
+1770070414: Client tv-00undefined disconnected, session taken over.
+1770070414: New client connected from 172.18.0.1:44728 as tv-00undefined (p4, c1, k60).
+1770070414: New connection from 172.18.0.1:44742 on port 1883.
+1770070414: Client tv-00undefined disconnected, session taken over.
+1770070414: New client connected from 172.18.0.1:44742 as tv-00undefined (p4, c1, k60).
+1770070414: New connection from 172.18.0.1:44744 on port 1883.
+1770070414: Client tv-00undefined disconnected, session taken over.
+1770070414: New client connected from 172.18.0.1:44744 as tv-00undefined (p4, c1, k60).
+1770070414: New connection from 172.18.0.1:44748 on port 1883.
+1770070414: Client tv-00undefined disconnected, session taken over.
+1770070414: New client connected from 172.18.0.1:44748 as tv-00undefined (p4, c1, k60).
+1770070415: New connection from 172.18.0.1:44756 on port 1883.
+1770070415: Client tv-00undefined disconnected, session taken over.
+1770070415: New client connected from 172.18.0.1:44756 as tv-00undefined (p4, c1, k60).
+1770070415: New connection from 172.18.0.1:44760 on port 1883.
+1770070415: Client tv-00undefined disconnected, session taken over.
+1770070415: New client connected from 172.18.0.1:44760 as tv-00undefined (p4, c1, k60).
+1770070415: New connection from 172.18.0.1:44764 on port 1883.
+1770070415: Client tv-00undefined disconnected, session taken over.
+1770070415: New client connected from 172.18.0.1:44764 as tv-00undefined (p4, c1, k60).
+1770070415: New connection from 172.18.0.1:44780 on port 1883.
+1770070415: Client tv-00undefined disconnected, session taken over.
+1770070415: New client connected from 172.18.0.1:44780 as tv-00undefined (p4, c1, k60).
+1770070416: New connection from 172.18.0.1:44790 on port 1883.
+1770070416: Client tv-00undefined disconnected, session taken over.
+1770070416: New client connected from 172.18.0.1:44790 as tv-00undefined (p4, c1, k60).
+1770070416: New connection from 172.18.0.1:44804 on port 1883.
+1770070416: Client tv-00undefined disconnected, session taken over.
+1770070416: New client connected from 172.18.0.1:44804 as tv-00undefined (p4, c1, k60).
+1770070416: New connection from 172.18.0.1:44814 on port 1883.
+1770070416: Client tv-00undefined disconnected, session taken over.
+1770070416: New client connected from 172.18.0.1:44814 as tv-00undefined (p4, c1, k60).
+1770070416: New connection from 172.18.0.1:44830 on port 1883.
+1770070416: Client tv-00undefined disconnected, session taken over.
+1770070416: New client connected from 172.18.0.1:44830 as tv-00undefined (p4, c1, k60).
+1770070417: New connection from 172.18.0.1:44832 on port 1883.
+1770070417: Client tv-00undefined disconnected, session taken over.
+1770070417: New client connected from 172.18.0.1:44832 as tv-00undefined (p4, c1, k60).
+1770070417: New connection from 172.18.0.1:44844 on port 1883.
+1770070417: Client tv-00undefined disconnected, session taken over.
+1770070417: New client connected from 172.18.0.1:44844 as tv-00undefined (p4, c1, k60).
+1770070417: New connection from 172.18.0.1:44856 on port 1883.
+1770070417: Client tv-00undefined disconnected, session taken over.
+1770070417: New client connected from 172.18.0.1:44856 as tv-00undefined (p4, c1, k60).
+1770070417: New connection from 172.18.0.1:44862 on port 1883.
+1770070417: Client tv-00undefined disconnected, session taken over.
+1770070417: New client connected from 172.18.0.1:44862 as tv-00undefined (p4, c1, k60).
+1770070418: New connection from 172.18.0.1:44874 on port 1883.
+1770070418: Client tv-00undefined disconnected, session taken over.
+1770070418: New client connected from 172.18.0.1:44874 as tv-00undefined (p4, c1, k60).
+1770070418: New connection from 172.18.0.1:44878 on port 1883.
+1770070418: Client tv-00undefined disconnected, session taken over.
+1770070418: New client connected from 172.18.0.1:44878 as tv-00undefined (p4, c1, k60).
+1770070418: New connection from 172.18.0.1:44882 on port 1883.
+1770070418: Client tv-00undefined disconnected, session taken over.
+1770070418: New client connected from 172.18.0.1:44882 as tv-00undefined (p4, c1, k60).
+1770070418: New connection from 172.18.0.1:44884 on port 1883.
+1770070418: Client tv-00undefined disconnected, session taken over.
+1770070418: New client connected from 172.18.0.1:44884 as tv-00undefined (p4, c1, k60).
+1770070419: New connection from 172.18.0.1:44890 on port 1883.
+1770070419: Client tv-00undefined disconnected, session taken over.
+1770070419: New client connected from 172.18.0.1:44890 as tv-00undefined (p4, c1, k60).
+1770070419: New connection from 172.18.0.1:44892 on port 1883.
+1770070419: Client tv-00undefined disconnected, session taken over.
+1770070419: New client connected from 172.18.0.1:44892 as tv-00undefined (p4, c1, k60).
+1770070419: New connection from 172.18.0.1:44898 on port 1883.
+1770070419: Client tv-00undefined disconnected, session taken over.
+1770070419: New client connected from 172.18.0.1:44898 as tv-00undefined (p4, c1, k60).
+1770070419: New connection from 172.18.0.1:44912 on port 1883.
+1770070419: Client tv-00undefined disconnected, session taken over.
+1770070419: New client connected from 172.18.0.1:44912 as tv-00undefined (p4, c1, k60).
+1770070420: New connection from 172.18.0.1:57690 on port 1883.
+1770070420: Client tv-00undefined disconnected, session taken over.
+1770070420: New client connected from 172.18.0.1:57690 as tv-00undefined (p4, c1, k60).
+1770070420: New connection from 172.18.0.1:57704 on port 1883.
+1770070420: Client tv-00undefined disconnected, session taken over.
+1770070420: New client connected from 172.18.0.1:57704 as tv-00undefined (p4, c1, k60).
+1770070420: New connection from 172.18.0.1:57708 on port 1883.
+1770070420: Client tv-00undefined disconnected, session taken over.
+1770070420: New client connected from 172.18.0.1:57708 as tv-00undefined (p4, c1, k60).
+1770070420: New connection from 172.18.0.1:57710 on port 1883.
+1770070420: Client tv-00undefined disconnected, session taken over.
+1770070420: New client connected from 172.18.0.1:57710 as tv-00undefined (p4, c1, k60).
+1770070421: New connection from 172.18.0.1:57726 on port 1883.
+1770070421: Client tv-00undefined disconnected, session taken over.
+1770070421: New client connected from 172.18.0.1:57726 as tv-00undefined (p4, c1, k60).
+1770070421: New connection from 172.18.0.1:57728 on port 1883.
+1770070421: Client tv-00undefined disconnected, session taken over.
+1770070421: New client connected from 172.18.0.1:57728 as tv-00undefined (p4, c1, k60).
+1770070421: New connection from 172.18.0.1:57738 on port 1883.
+1770070421: Client tv-00undefined disconnected, session taken over.
+1770070421: New client connected from 172.18.0.1:57738 as tv-00undefined (p4, c1, k60).
+1770070421: New connection from 172.18.0.1:57746 on port 1883.
+1770070421: Client tv-00undefined disconnected, session taken over.
+1770070421: New client connected from 172.18.0.1:57746 as tv-00undefined (p4, c1, k60).
+1770070422: New connection from 172.18.0.1:57750 on port 1883.
+1770070422: Client tv-00undefined disconnected, session taken over.
+1770070422: New client connected from 172.18.0.1:57750 as tv-00undefined (p4, c1, k60).
+1770070422: New connection from 172.18.0.1:57766 on port 1883.
+1770070422: Client tv-00undefined disconnected, session taken over.
+1770070422: New client connected from 172.18.0.1:57766 as tv-00undefined (p4, c1, k60).
+1770070422: New connection from 172.18.0.1:57770 on port 1883.
+1770070422: Client tv-00undefined disconnected, session taken over.
+1770070422: New client connected from 172.18.0.1:57770 as tv-00undefined (p4, c1, k60).
+1770070422: New connection from 172.18.0.1:57774 on port 1883.
+1770070422: Client tv-00undefined disconnected, session taken over.
+1770070422: New client connected from 172.18.0.1:57774 as tv-00undefined (p4, c1, k60).
+1770070423: New connection from 172.18.0.1:57782 on port 1883.
+1770070423: Client tv-00undefined disconnected, session taken over.
+1770070423: New client connected from 172.18.0.1:57782 as tv-00undefined (p4, c1, k60).
+1770070423: New connection from 172.18.0.1:57788 on port 1883.
+1770070423: Client tv-00undefined disconnected, session taken over.
+1770070423: New client connected from 172.18.0.1:57788 as tv-00undefined (p4, c1, k60).
+1770070423: New connection from 172.18.0.1:57798 on port 1883.
+1770070423: Client tv-00undefined disconnected, session taken over.
+1770070423: New client connected from 172.18.0.1:57798 as tv-00undefined (p4, c1, k60).
+1770070423: New connection from 172.18.0.1:57812 on port 1883.
+1770070423: Client tv-00undefined disconnected, session taken over.
+1770070423: New client connected from 172.18.0.1:57812 as tv-00undefined (p4, c1, k60).
+1770070424: New connection from 172.18.0.1:57818 on port 1883.
+1770070424: Client tv-00undefined disconnected, session taken over.
+1770070424: New client connected from 172.18.0.1:57818 as tv-00undefined (p4, c1, k60).
+1770070424: New connection from 172.18.0.1:57826 on port 1883.
+1770070424: Client tv-00undefined disconnected, session taken over.
+1770070424: New client connected from 172.18.0.1:57826 as tv-00undefined (p4, c1, k60).
+1770070424: New connection from 172.18.0.1:57830 on port 1883.
+1770070424: Client tv-00undefined disconnected, session taken over.
+1770070424: New client connected from 172.18.0.1:57830 as tv-00undefined (p4, c1, k60).
+1770070424: New connection from 172.18.0.1:57842 on port 1883.
+1770070424: Client tv-00undefined disconnected, session taken over.
+1770070424: New client connected from 172.18.0.1:57842 as tv-00undefined (p4, c1, k60).
+1770070425: New connection from 172.18.0.1:57846 on port 1883.
+1770070425: Client tv-00undefined disconnected, session taken over.
+1770070425: New client connected from 172.18.0.1:57846 as tv-00undefined (p4, c1, k60).
+1770070425: New connection from 172.18.0.1:57850 on port 1883.
+1770070425: Client tv-00undefined disconnected, session taken over.
+1770070425: New client connected from 172.18.0.1:57850 as tv-00undefined (p4, c1, k60).
+1770070425: New connection from 172.18.0.1:57862 on port 1883.
+1770070425: Client tv-00undefined disconnected, session taken over.
+1770070425: New client connected from 172.18.0.1:57862 as tv-00undefined (p4, c1, k60).
+1770070425: New connection from 172.18.0.1:57872 on port 1883.
+1770070425: Client tv-00undefined disconnected, session taken over.
+1770070425: New client connected from 172.18.0.1:57872 as tv-00undefined (p4, c1, k60).
+1770070426: New connection from 172.18.0.1:57876 on port 1883.
+1770070426: Client tv-00undefined disconnected, session taken over.
+1770070426: New client connected from 172.18.0.1:57876 as tv-00undefined (p4, c1, k60).
+1770070426: New connection from 172.18.0.1:57892 on port 1883.
+1770070426: Client tv-00undefined disconnected, session taken over.
+1770070426: New client connected from 172.18.0.1:57892 as tv-00undefined (p4, c1, k60).
+1770070426: New connection from 172.18.0.1:57906 on port 1883.
+1770070426: Client tv-00undefined disconnected, session taken over.
+1770070426: New client connected from 172.18.0.1:57906 as tv-00undefined (p4, c1, k60).
+1770070426: New connection from 172.18.0.1:57908 on port 1883.
+1770070426: Client tv-00undefined disconnected, session taken over.
+1770070426: New client connected from 172.18.0.1:57908 as tv-00undefined (p4, c1, k60).
+1770070427: New connection from 172.18.0.1:57918 on port 1883.
+1770070427: Client tv-00undefined disconnected, session taken over.
+1770070427: New client connected from 172.18.0.1:57918 as tv-00undefined (p4, c1, k60).
+1770070427: New connection from 172.18.0.1:57930 on port 1883.
+1770070427: Client tv-00undefined disconnected, session taken over.
+1770070427: New client connected from 172.18.0.1:57930 as tv-00undefined (p4, c1, k60).
+1770070427: New connection from 172.18.0.1:57940 on port 1883.
+1770070427: Client tv-00undefined disconnected, session taken over.
+1770070427: New client connected from 172.18.0.1:57940 as tv-00undefined (p4, c1, k60).
+1770070427: New connection from 172.18.0.1:57952 on port 1883.
+1770070427: Client tv-00undefined disconnected, session taken over.
+1770070427: New client connected from 172.18.0.1:57952 as tv-00undefined (p4, c1, k60).
+1770070428: New connection from 172.18.0.1:57960 on port 1883.
+1770070428: Client tv-00undefined disconnected, session taken over.
+1770070428: New client connected from 172.18.0.1:57960 as tv-00undefined (p4, c1, k60).
+1770070428: New connection from 172.18.0.1:57976 on port 1883.
+1770070428: Client tv-00undefined disconnected, session taken over.
+1770070428: New client connected from 172.18.0.1:57976 as tv-00undefined (p4, c1, k60).
+1770070428: New connection from 172.18.0.1:57988 on port 1883.
+1770070428: Client tv-00undefined disconnected, session taken over.
+1770070428: New client connected from 172.18.0.1:57988 as tv-00undefined (p4, c1, k60).
+1770070428: New connection from 172.18.0.1:57996 on port 1883.
+1770070428: Client tv-00undefined disconnected, session taken over.
+1770070428: New client connected from 172.18.0.1:57996 as tv-00undefined (p4, c1, k60).
+1770070429: New connection from 172.18.0.1:58008 on port 1883.
+1770070429: Client tv-00undefined disconnected, session taken over.
+1770070429: New client connected from 172.18.0.1:58008 as tv-00undefined (p4, c1, k60).
+1770070429: New connection from 172.18.0.1:58016 on port 1883.
+1770070429: Client tv-00undefined disconnected, session taken over.
+1770070429: New client connected from 172.18.0.1:58016 as tv-00undefined (p4, c1, k60).
+1770070429: New connection from 172.18.0.1:58018 on port 1883.
+1770070429: Client tv-00undefined disconnected, session taken over.
+1770070429: New client connected from 172.18.0.1:58018 as tv-00undefined (p4, c1, k60).
+1770070429: New connection from 172.18.0.1:58020 on port 1883.
+1770070429: Client tv-00undefined disconnected, session taken over.
+1770070429: New client connected from 172.18.0.1:58020 as tv-00undefined (p4, c1, k60).
+1770070430: New connection from 172.18.0.1:59860 on port 1883.
+1770070430: Client tv-00undefined disconnected, session taken over.
+1770070430: New client connected from 172.18.0.1:59860 as tv-00undefined (p4, c1, k60).
+1770070430: New connection from 172.18.0.1:59872 on port 1883.
+1770070430: Client tv-00undefined disconnected, session taken over.
+1770070430: New client connected from 172.18.0.1:59872 as tv-00undefined (p4, c1, k60).
+1770070430: New connection from 172.18.0.1:59880 on port 1883.
+1770070430: Client tv-00undefined disconnected, session taken over.
+1770070430: New client connected from 172.18.0.1:59880 as tv-00undefined (p4, c1, k60).
+1770070430: New connection from 172.18.0.1:59882 on port 1883.
+1770070430: Client tv-00undefined disconnected, session taken over.
+1770070430: New client connected from 172.18.0.1:59882 as tv-00undefined (p4, c1, k60).
+1770070431: New connection from 172.18.0.1:59888 on port 1883.
+1770070431: Client tv-00undefined disconnected, session taken over.
+1770070431: New client connected from 172.18.0.1:59888 as tv-00undefined (p4, c1, k60).
+1770070431: New connection from 172.18.0.1:59902 on port 1883.
+1770070431: Client tv-00undefined disconnected, session taken over.
+1770070431: New client connected from 172.18.0.1:59902 as tv-00undefined (p4, c1, k60).
+1770070431: New connection from 172.18.0.1:59914 on port 1883.
+1770070431: Client tv-00undefined disconnected, session taken over.
+1770070431: New client connected from 172.18.0.1:59914 as tv-00undefined (p4, c1, k60).
+1770070431: New connection from 172.18.0.1:59920 on port 1883.
+1770070431: Client tv-00undefined disconnected, session taken over.
+1770070431: New client connected from 172.18.0.1:59920 as tv-00undefined (p4, c1, k60).
+1770070431: Client tv-00undefined closed its connection.
+1770070489: New connection from 172.18.0.1:43674 on port 1883.
+1770070489: New connection from 172.18.0.1:43708 on port 1883.
+1770070489: New connection from 172.18.0.1:43672 on port 1883.
+1770070489: New connection from 172.18.0.1:43700 on port 1883.
+1770070489: New connection from 172.18.0.1:43718 on port 1883.
+1770070489: New client connected from 172.18.0.1:43700 as tv-001 (p4, c1, k60).
+1770070489: New client connected from 172.18.0.1:43674 as tv-002 (p4, c1, k60).
+1770070489: New client connected from 172.18.0.1:43708 as tv-003 (p4, c1, k60).
+1770070489: New client connected from 172.18.0.1:43718 as tv-004 (p4, c1, k60).
+1770070489: New client connected from 172.18.0.1:43672 as tv-005 (p4, c1, k60).
+1770070504: Client tv-005 closed its connection.
+1770070504: Client tv-001 closed its connection.
+1770070504: Client tv-003 closed its connection.
+1770070504: Client tv-004 closed its connection.
+1770070504: Client tv-002 closed its connection.
+1770070514: New connection from 172.18.0.1:48454 on port 1883.
+1770070514: New connection from 172.18.0.1:48466 on port 1883.
+1770070514: New connection from 172.18.0.1:48478 on port 1883.
+1770070514: New connection from 172.18.0.1:48492 on port 1883.
+1770070514: New connection from 172.18.0.1:48498 on port 1883.
+1770070514: New client connected from 172.18.0.1:48466 as tv-001 (p4, c1, k60).
+1770070514: New client connected from 172.18.0.1:48478 as tv-002 (p4, c1, k60).
+1770070514: New client connected from 172.18.0.1:48454 as tv-003 (p4, c1, k60).
+1770070514: New client connected from 172.18.0.1:48498 as tv-004 (p4, c1, k60).
+1770070514: New client connected from 172.18.0.1:48492 as tv-005 (p4, c1, k60).
+1770070675: Client tv-005 closed its connection.
+1770070675: Client tv-004 closed its connection.
+1770070675: Client tv-002 closed its connection.
+1770070675: Client tv-003 closed its connection.
+1770070675: Client tv-001 closed its connection.
+1770071359: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770071376: mosquitto version 2.1.0 terminating
+1770071376: Saving in-memory database to /mosquitto/data//mosquitto.db.

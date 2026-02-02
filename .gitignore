@@ -1,1 +1,2 @@
 mosquitto/config/passwd
+client/dist/*

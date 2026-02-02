@@ -1,0 +1,19 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write *.ts",
+    "build": "npx tsc",
+    "start": "node dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "Simulates concurrent clients connected to the MQTT broker",
+  "dependencies": {
+    "mqtt": "^5.15.0",
+    "prettier": "^3.8.1",
+    "typescript": "^5.9.3"
+  }
+}
