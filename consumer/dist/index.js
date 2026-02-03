@@ -38,9 +38,20 @@ const testQuery = (topic) => {
 const testDwellTimePerChannel = (userPseudoId, channelId) => {
     let queryClient = influx_1.default.getQueryApi(org);
     let fluxQuery = `from(bucket: "uwb_telemetry_db")
-    |> range(start: -10m)
+    |> range(start: -24h)
     |> filter(fn: (r) => r["userPseudoId"] == "${userPseudoId}" and r["channelId"] == "${channelId}")
-    |> drop(columns: ["host"])`;
+    |> reduce(
+        fn: (r, accumulator) => {
+          stop = uint(v: r["_stop"])
+          start = uint(v: r["_start"])
+          curr_total_dwell_time = accumulator.total_dwell_time + uint(v: stop - start)
+          return {
+            total_dwell_time: curr_total_dwell_time,
+          }
+        },
+        identity: {total_dwell_time: uint(v: 0)},
+    )
+    |> yield(name: "Total dwell time on ${channelId} for ${userPseudoId}")`;
     queryClient.queryRows(fluxQuery, {
         next: (row, tableMeta) => {
             const tableObject = tableMeta.toObject(row);
