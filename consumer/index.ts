@@ -63,6 +63,28 @@ const testDwellTimePerChannel = (userPseudoId: string, channelId: string) => {
     },
   });
 };
+const testContChannelSwitches = (userPseudoId: string) => {
+  let queryClient = influxClient.getQueryApi(org);
+  let fluxQuery = `from(bucket: "uwb_telemetry_db")
+    |> range(start: -24h)
+    |> filter(fn: (r) => r["userPseudoId"] == "${userPseudoId}")
+    |> filter(fn: (r) => r["_field"] == "channelId")
+    |> unique(column: "_value")
+    |> count()`;
+
+  queryClient.queryRows(fluxQuery, {
+    next: (row: any, tableMeta: any) => {
+      const tableObject = tableMeta.toObject(row);
+      console.log(tableObject);
+    },
+    error: (error: any) => {
+      console.error('\nError', error);
+    },
+    complete: () => {
+      console.log('\nSuccess');
+    },
+  });
+};
 
 (() => {
   const clientId = 'tvId-consumer';
@@ -113,6 +135,7 @@ const testDwellTimePerChannel = (userPseudoId: string, channelId: string) => {
     }
     // TEST
     // testQuery(topic);
-    testDwellTimePerChannel(value.userPseudoId, value.channelId);
+    // testDwellTimePerChannel(value.userPseudoId, value.channelId);
+    testContChannelSwitches(value.userPseudoId);
   });
 })();

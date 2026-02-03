@@ -35,6 +35,8 @@ const testQuery = (topic) => {
         },
     });
 };
+// https://docs.influxdata.com/influxdb/cloud/query-data/flux/operate-on-timestamps/#calculate-the-duration-between-two-timestamps
+// https://community.influxdata.com/t/help-with-cumulative-sum-please/33123
 const testDwellTimePerChannel = (userPseudoId, channelId) => {
     let queryClient = influx_1.default.getQueryApi(org);
     let fluxQuery = `from(bucket: "uwb_telemetry_db")
@@ -51,7 +53,28 @@ const testDwellTimePerChannel = (userPseudoId, channelId) => {
         },
         identity: {total_dwell_time: uint(v: 0)},
     )
-    |> yield(name: "Total dwell time on ${channelId} for ${userPseudoId}")`;
+    |> yield(name: "Total dwell time in ms on ${channelId} for ${userPseudoId}")`;
+    queryClient.queryRows(fluxQuery, {
+        next: (row, tableMeta) => {
+            const tableObject = tableMeta.toObject(row);
+            console.log(tableObject);
+        },
+        error: (error) => {
+            console.error('\nError', error);
+        },
+        complete: () => {
+            console.log('\nSuccess');
+        },
+    });
+};
+const testContChannelSwitches = (userPseudoId) => {
+    let queryClient = influx_1.default.getQueryApi(org);
+    let fluxQuery = `from(bucket: "uwb_telemetry_db")
+    |> range(start: -24h)
+    |> filter(fn: (r) => r["userPseudoId"] == "${userPseudoId}")
+    |> filter(fn: (r) => r["_field"] == "channelId")
+    |> unique(column: "_value")
+    |> count()`;
     queryClient.queryRows(fluxQuery, {
         next: (row, tableMeta) => {
             const tableObject = tableMeta.toObject(row);
@@ -109,6 +132,7 @@ const testDwellTimePerChannel = (userPseudoId, channelId) => {
         }
         // TEST
         // testQuery(topic);
-        testDwellTimePerChannel(value.userPseudoId, value.channelId);
+        // testDwellTimePerChannel(value.userPseudoId, value.channelId);
+        testContChannelSwitches(value.userPseudoId);
     }));
 })();
