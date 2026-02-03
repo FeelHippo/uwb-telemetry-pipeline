@@ -2064,3 +2064,101 @@ To fix this, use `chmod 0700 /mosquitto/config/passwd`.
 1770112996: Opening ipv4 listen socket on port 9001.
 1770112996: Opening ipv6 listen socket on port 9001.
 1770112996: mosquitto version 2.1.0 running
+1770114797: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770116484: New connection from 172.18.0.1:40174 on port 1883.
+1770116484: Client tvId-consumer disconnected, not authorised.
+1770116485: New connection from 172.18.0.1:40180 on port 1883.
+1770116485: Client tvId-consumer disconnected, not authorised.
+1770116486: New connection from 172.18.0.1:40184 on port 1883.
+1770116486: Client tvId-consumer disconnected, not authorised.
+1770116487: New connection from 172.18.0.1:40200 on port 1883.
+1770116487: Client tvId-consumer disconnected, not authorised.
+1770116488: New connection from 172.18.0.1:53164 on port 1883.
+1770116488: Client tvId-consumer disconnected, not authorised.
+1770116489: New connection from 172.18.0.1:53180 on port 1883.
+1770116489: Client tvId-consumer disconnected, not authorised.
+1770116490: New connection from 172.18.0.1:53184 on port 1883.
+1770116490: Client tvId-consumer disconnected, not authorised.
+1770116491: New connection from 172.18.0.1:53196 on port 1883.
+1770116491: Client tvId-consumer disconnected, not authorised.
+1770116492: New connection from 172.18.0.1:53210 on port 1883.
+1770116492: Client tvId-consumer disconnected, not authorised.
+1770116493: New connection from 172.18.0.1:53214 on port 1883.
+1770116493: Client tvId-consumer disconnected, not authorised.
+1770116494: New connection from 172.18.0.1:53222 on port 1883.
+1770116494: Client tvId-consumer disconnected, not authorised.
+1770116495: New connection from 172.18.0.1:53234 on port 1883.
+1770116495: Client tvId-consumer disconnected, not authorised.
+1770116496: New connection from 172.18.0.1:53244 on port 1883.
+1770116496: Client tvId-consumer disconnected, not authorised.
+1770116497: New connection from 172.18.0.1:53258 on port 1883.
+1770116497: Client tvId-consumer disconnected, not authorised.
+1770116498: New connection from 172.18.0.1:36628 on port 1883.
+1770116498: Client tvId-consumer disconnected, not authorised.
+1770116499: New connection from 172.18.0.1:36634 on port 1883.
+1770116499: Client tvId-consumer disconnected, not authorised.
+1770116500: New connection from 172.18.0.1:36648 on port 1883.
+1770116500: Client tvId-consumer disconnected, not authorised.
+1770116501: New connection from 172.18.0.1:36652 on port 1883.
+1770116501: Client tvId-consumer disconnected, not authorised.
+1770116502: New connection from 172.18.0.1:36658 on port 1883.
+1770116502: Client tvId-consumer disconnected, not authorised.
+1770116503: New connection from 172.18.0.1:36664 on port 1883.
+1770116503: Client tvId-consumer disconnected, not authorised.
+1770116504: New connection from 172.18.0.1:36666 on port 1883.
+1770116504: Client tvId-consumer disconnected, not authorised.
+1770116505: New connection from 172.18.0.1:36682 on port 1883.
+1770116505: Client tvId-consumer disconnected, not authorised.
+1770116506: New connection from 172.18.0.1:36694 on port 1883.
+1770116506: Client tvId-consumer disconnected, not authorised.
+1770116597: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770118399: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770119427: mosquitto version 2.1.0 terminating
+1770119427: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770119512: mosquitto version 2.1.0 starting
+1770119512: Config loaded from /mosquitto/config/mosquitto.conf.
+1770119512: Bridge support available.
+1770119512: Persistence support available.
+1770119512: TLS support available.
+1770119512: TLS-PSK support available.
+1770119512: Websockets support available.
+1770119512: Warning: File /mosquitto/config/passwd has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/passwd`.
+
+1770119512: Warning: File /mosquitto/config/passwd owner is not mosquitto. Future versions will refuse to load this file.To fix this, use `chown mosquitto /mosquitto/config/passwd`.
+
+1770119512: Warning: File /mosquitto/config/passwd group is not mosquitto. Future versions will refuse to load this file.
+
+1770119512: Plugin builtin-security has registered to receive 'basic-auth' events.
+1770119512: Opening ipv4 listen socket on port 1883.
+1770119512: Opening ipv6 listen socket on port 1883.
+1770119512: Opening ipv4 listen socket on port 9001.
+1770119512: Opening ipv6 listen socket on port 9001.
+1770119512: mosquitto version 2.1.0 running
+1770121313: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770123202: mosquitto version 2.1.0 starting
+1770123202: Config loaded from /mosquitto/config/mosquitto.conf.
+1770123202: Bridge support available.
+1770123202: Persistence support available.
+1770123202: TLS support available.
+1770123202: TLS-PSK support available.
+1770123202: Websockets support available.
+1770123202: Warning: File /mosquitto/config/passwd has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/passwd`.
+
+1770123202: Warning: File /mosquitto/config/passwd owner is not mosquitto. Future versions will refuse to load this file.To fix this, use `chown mosquitto /mosquitto/config/passwd`.
+
+1770123202: Warning: File /mosquitto/config/passwd group is not mosquitto. Future versions will refuse to load this file.
+
+1770123202: Plugin builtin-security has registered to receive 'basic-auth' events.
+1770123202: Opening ipv4 listen socket on port 1883.
+1770123202: Opening ipv6 listen socket on port 1883.
+1770123202: Opening ipv4 listen socket on port 9001.
+1770123202: Opening ipv6 listen socket on port 9001.
+1770123202: mosquitto version 2.1.0 running
+1770125003: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770126804: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770128604: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770130406: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770132206: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770134008: Saving in-memory database to /mosquitto/data//mosquitto.db.

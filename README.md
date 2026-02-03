@@ -14,6 +14,13 @@ docker run -d \
   eclipse-mosquitto:latest
 ```
 
+If you run this project locally, don't forget to start your daemons:
+
+```bash
+sudo systemctl start docker
+sudo systemctl start influxdb
+```
+
 This project uses [Docker Compose](https://docs.docker.com/compose/) to orchestrate the various containers required for this application.
 
 To simulate a real life scenario, this project requires authentication:

@@ -1,5 +1,4 @@
 import * as broker from 'mqtt';
-import { randomUUID } from 'node:crypto';
 
 const tvChannels = [
   'ABC',
@@ -82,14 +81,14 @@ const mqttBroker = (id: number) => {
             formatMessage(
               dongleId,
               tvId,
-              randomUUID.toString(),
+              `${tvId}-${dongleId}`,
               randomTvChannel(),
               randomNumberBetween(1, 300),
               randomNumberBetween(-30, -100),
               seq++,
             ),
           ),
-        500,
+        randomNumberBetween(100, 3600),
       );
     }
   });
