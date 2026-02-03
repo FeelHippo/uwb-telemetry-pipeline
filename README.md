@@ -24,17 +24,28 @@ docker exec -it mosquitto mosquitto_passwd -c /mosquitto/config/passwd username
 
 The password file gets stored in your mounted config volume, so it persists between container restarts.
 
+Check if everything is fine with the password file:
+
+```bash
+mosquitto -c ./mosquitto/config/mosquitto.conf
+
+# in case of permission errors (Linux)
+chown root:root mosquitto/config/passwd
+chmod 777 mosquitto/config/passwd
+```
+
 Start the project:
 
 ```bash
-docker-compose up -d
-
-sudo docker logs -f mosquitto
+docker system prune -a
+docker-compose up --build
+docker container ls
+docker logs -f <mosquitto | uwb-telemetry-pipeline-client-1 | uwb-telemetry-pipeline-consumer-1>
 ```
 
 To make sure everything is properly set up, use [MQTT Explorer](https://mqtt-explorer.com/) to test connection and messaging.
 
-Testing via Docker:
+Testing the broker via Docker:
 
 ```bash
 # Subscribe using the container

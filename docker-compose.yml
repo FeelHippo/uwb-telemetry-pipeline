@@ -11,11 +11,9 @@ services:
       - ./mosquitto/log:/mosquitto/log
   client:
     build: ./client
-    command: npm run build && npm start
     depends_on:
       - mosquitto
   consumer:
     build: ./consumer
-    command: npm run build && npm start
     depends_on:
       - client

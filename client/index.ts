@@ -62,7 +62,7 @@ const mqttBroker = (id: number) => {
   const tvId = `tv-00${id}`;
   const dongleId = `dng-${randomNumberBetween(1, 100)}`;
   const client = broker.connect({
-    host: 'localhost',
+    host: 'test.mosquitto.org',
     port: 1883,
     clientId: tvId,
   });
