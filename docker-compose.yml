@@ -5,10 +5,44 @@ services:
     restart: unless-stopped
     ports:
       - "1883:1883"
+    networks:
+      - monitoring
     volumes:
       - ./mosquitto/config:/mosquitto/config
       - ./mosquitto/data:/mosquitto/data
       - ./mosquitto/log:/mosquitto/log
+  influxdb:
+    image: influxdb
+    container_name: influxdb
+    restart: always
+    ports:
+      - "8086:8086"
+    networks:
+      - monitoring
+    volumes:
+      - influxdb-data:/var/lib/influxdb2
+      - influxdb-config:/etc/influxdb2
+    environment:
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=user
+      - DOCKER_INFLUXDB_INIT_PASSWORD=password1234
+      - DOCKER_INFLUXDB_INIT_ORG=symera
+      - DOCKER_INFLUXDB_INIT_BUCKET=uwb_telemetry_db
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=I-Px4mxWr5qBERAzlZUPnYsu6XbAEYYZnUfxHN755w3yAqTupUVKqWa-6fq0S-FkUt7Mz3KRkjHNTA-bBEOkPw==
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    restart: always
+    ports:
+      - "3000:3000"
+    networks:
+      - monitoring
+    volumes:
+      - ./grafana-provisioning:/etc/grafana/provisioning
+      - grafana-data:/var/lib/grafana
+    depends_on:
+      - influxdb
   client:
     build: ./client
     depends_on:
@@ -17,3 +51,10 @@ services:
     build: ./consumer
     depends_on:
       - client
+networks:
+  monitoring:
+
+volumes:
+  grafana-data:
+  influxdb-data:
+  influxdb-config:
