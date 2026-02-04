@@ -3,67 +3,95 @@ import * as broker from 'mqtt';
 import { message_schema } from './validators/message';
 import { Message } from './interfaces/message';
 import influxClient from './db/influx';
-import { Point } from '@influxdata/influxdb-client';
+import { FluxTableMetaData, Point } from '@influxdata/influxdb-client';
+import { randomUUID } from 'node:crypto';
 
 const org = 'Filippo';
 const bucket = 'uwb_telemetry_db';
 const writeClient = influxClient.getWriteApi(org, bucket, 'ns');
-const threshold = 200;
+const threshold = 150;
 
-const testQuery = (topic: string) => {
+const testQuery = async (topic: string) => {
   let queryClient = influxClient.getQueryApi(org);
   let fluxQuery = `from(bucket: "uwb_telemetry_db")
  |> range(start: -10m)
- |> filter(fn: (r) => r._measurement == "${topic}")`;
+ |> filter(fn: (r) => r._measurement == "${topic}")
+ |> filter(fn: (r) => r._field == "distanceCm")
+ |> sort(columns: ["dongleId", "seq"])
+ |> mean()
+ |> group()`;
+  // Handle minor out-of-order within a window
+  // https://docs.influxdata.com/influxdb/cloud/query-data/flux/sort-limit/
 
-  queryClient.queryRows(fluxQuery, {
-    next: (row: any, tableMeta: any) => {
+  let result: {
+    [key: string]: any;
+  }[] = [];
+
+  await queryClient.queryRows(fluxQuery, {
+    next: (row: string[], tableMeta: FluxTableMetaData) => {
       const tableObject = tableMeta.toObject(row);
-      console.log(tableObject);
+      result.push(tableObject);
     },
-    error: (error: any) => {
+    error: (error: Error) => {
       console.error('\nError', error);
     },
     complete: () => {
-      console.log('\nSuccess');
+      console.log('\nSuccess', result);
+      process.kill(process.pid, 'SIGINT');
     },
   });
 };
 
+// https://github.com/Symera-Wesuite/uwb-telemetry-pipeline-assignment?tab=readme-ov-file#2-dwell-time-per-channel
 // https://docs.influxdata.com/influxdb/cloud/query-data/flux/operate-on-timestamps/#calculate-the-duration-between-two-timestamps
 // https://community.influxdata.com/t/help-with-cumulative-sum-please/33123
-const testDwellTimePerChannel = (userPseudoId: string, channelId: string) => {
+const testDwellTimePerChannel = async (
+  userPseudoId: string,
+  channelId: string,
+) => {
   let queryClient = influxClient.getQueryApi(org);
   let fluxQuery = `from(bucket: "uwb_telemetry_db")
-    |> range(start: -24h)
-    |> filter(fn: (r) => r["userPseudoId"] == "${userPseudoId}" and r["channelId"] == "${channelId}")
-    |> reduce(
-        fn: (r, accumulator) => {
-          stop = uint(v: r["_stop"])
-          start = uint(v: r["_start"])
-          curr_total_dwell_time = accumulator.total_dwell_time + uint(v: stop - start)
-          return {
-            total_dwell_time: curr_total_dwell_time,
-          }
-        },
-        identity: {total_dwell_time: uint(v: 0)},
-    )
-    |> yield(name: "Total dwell time in ms on ${channelId} for ${userPseudoId}")`;
+    |> range(start: -10m)
+    |> filter(fn: (r) => r.userPseudoId == "${userPseudoId}")`;
 
-  queryClient.queryRows(fluxQuery, {
-    next: (row: any, tableMeta: any) => {
+  let result: {
+    [key: string]: any;
+  }[] = [];
+
+  await queryClient.queryRows(fluxQuery, {
+    next: (row: string[], tableMeta: FluxTableMetaData) => {
       const tableObject = tableMeta.toObject(row);
-      console.log(tableObject);
+      result.push(tableObject);
     },
-    error: (error: any) => {
+    error: (error: Error) => {
       console.error('\nError', error);
     },
     complete: () => {
-      console.log('\nSuccess');
+      let total = 0;
+      for (let index = 0; index < result.length; index++) {
+        if (!index) return;
+        const current = result[index];
+        const previous = result[index - 1];
+        // let's consider the time elapsed between the previous measurement and the current one
+        // this needs fine tuning. TODO(Filippo)
+        if (
+          [current['channelId'], previous['channelId']].every(
+            (id: string) => channelId == id,
+          )
+        ) {
+          total +=
+            new Date(current['_time']).getTime() -
+            new Date(previous[index - 1]['_time']).getTime();
+        }
+      }
+      console.log('\nSuccess', total);
+      process.kill(process.pid, 'SIGINT');
     },
   });
 };
-const testContChannelSwitches = (userPseudoId: string) => {
+
+// https://github.com/Symera-Wesuite/uwb-telemetry-pipeline-assignment?tab=readme-ov-file#3-channel-switches
+const testCountChannelSwitches = async (userPseudoId: string) => {
   let queryClient = influxClient.getQueryApi(org);
   let fluxQuery = `from(bucket: "uwb_telemetry_db")
     |> range(start: -24h)
@@ -72,16 +100,21 @@ const testContChannelSwitches = (userPseudoId: string) => {
     |> unique(column: "_value")
     |> count()`;
 
-  queryClient.queryRows(fluxQuery, {
-    next: (row: any, tableMeta: any) => {
+  let result: {
+    [key: string]: any;
+  }[] = [];
+
+  await queryClient.queryRows(fluxQuery, {
+    next: (row: string[], tableMeta: FluxTableMetaData) => {
       const tableObject = tableMeta.toObject(row);
-      console.log(tableObject);
+      result.push(tableObject);
     },
-    error: (error: any) => {
+    error: (error: Error) => {
       console.error('\nError', error);
     },
     complete: () => {
-      console.log('\nSuccess');
+      console.log('\nSuccess', result);
+      process.kill(process.pid, 'SIGINT');
     },
   });
 };
@@ -117,6 +150,9 @@ const testContChannelSwitches = (userPseudoId: string) => {
     }
     try {
       const point = new Point(topic)
+        // Preserve duplicate points
+        // https://docs.influxdata.com/influxdb/v2/write-data/best-practices/duplicate-points/#add-an-arbitrary-tag
+        .tag('uniq', randomUUID())
         .tag('userPseudoId', value.userPseudoId)
         .tag('channelId', value.channelId)
         .timestamp(new Date(value.ts))
@@ -127,6 +163,7 @@ const testContChannelSwitches = (userPseudoId: string) => {
         .intField('distanceCm', value.distanceCm)
         .intField('rssi', value.rssi)
         .intField('seq', value.seq)
+        // https://github.com/Symera-Wesuite/uwb-telemetry-pipeline-assignment?tab=readme-ov-file#1-presence
         .booleanField('present', value.distanceCm <= threshold);
       await writeClient.writePoint(point);
       await writeClient.flush();
@@ -134,8 +171,8 @@ const testContChannelSwitches = (userPseudoId: string) => {
       console.log({ error });
     }
     // TEST
-    // testQuery(topic);
-    // testDwellTimePerChannel(value.userPseudoId, value.channelId);
-    testContChannelSwitches(value.userPseudoId);
+    // await testQuery(topic);
+    await testDwellTimePerChannel(value.userPseudoId, value.channelId);
+    // await testCountChannelSwitches(value.userPseudoId);
   });
 })();
