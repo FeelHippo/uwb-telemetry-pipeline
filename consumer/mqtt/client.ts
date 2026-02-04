@@ -6,8 +6,9 @@ import { message_schema } from '../validators/message';
 import { Message } from '../interfaces/message';
 import { Point } from '@influxdata/influxdb-client';
 
-export const org = 'Filippo';
-export const bucket = 'uwb_telemetry_db';
+export const org = process.env.DOCKER_INFLUXDB_INIT_ORG ?? 'symera';
+export const bucket =
+  process.env.DOCKER_INFLUXDB_INIT_BUCKET ?? 'uwb_telemetry_db';
 
 const writeClient = influxClient.getWriteApi(org, bucket, 'ns');
 
@@ -19,7 +20,6 @@ export default (() => {
     clientId,
   });
   client.on('connect', () => {
-    console.log('Connection established successfully!');
     client.subscribe('symera/telemetry/#', (err) => {
       if (err) {
         client.end();
@@ -37,7 +37,7 @@ export default (() => {
       JSON.parse(message.toString()),
     );
     if (error) {
-      console.log({ error });
+      console.error({ error });
       return;
     }
     try {
@@ -58,7 +58,7 @@ export default (() => {
       await writeClient.writePoint(point);
       await writeClient.flush();
     } catch (error) {
-      console.log({ error });
+      console.error({ error });
     }
   });
 })();

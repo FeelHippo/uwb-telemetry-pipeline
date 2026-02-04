@@ -61,3 +61,88 @@ docker exec -it mosquitto mosquitto_sub -h localhost -t tv-001
 # Publish using the container
 docker exec -it mosquitto mosquitto_pub -h localhost -t tv-001 -m "Container message"
 ```
+
+#### RESTful
+
+```curl
+curl --location 'http://localhost:3001/all'
+
+{
+    "result": [
+        {
+            "result": "_result",
+            "table": 0,
+            "_start": "2026-02-04T15:55:16.672860688Z",
+            "_stop": "2026-02-04T16:05:16.672860688Z",
+            "_time": "2026-02-04T15:55:22.766196495Z",
+            "_value": 664,
+            "_field": "counter",
+            "_measurement": "boltdb_reads_total"
+        },
+        {
+            "result": "_result",
+            "table": 0,
+            "_start": "2026-02-04T15:55:16.672860688Z",
+            "_stop": "2026-02-04T16:05:16.672860688Z",
+            "_time": "2026-02-04T15:55:32.767603583Z",
+            "_value": 690,
+            "_field": "counter",
+            "_measurement": "boltdb_reads_total"
+        },
+        {
+            "result": "_result",
+            "table": 0,
+            "_start": "2026-02-04T15:55:16.672860688Z",
+            "_stop": "2026-02-04T16:05:16.672860688Z",
+            "_time": "2026-02-04T15:55:42.763006235Z",
+            "_value": 712,
+            "_field": "counter",
+            "_measurement": "boltdb_reads_total"
+        },
+...
+
+curl --location 'http://localhost:3001/presence/?userPseudoId=tv-001-dng-006&threshold=150'
+
+{
+    "result": [
+        {
+            "result": "_result",
+            "table": 0,
+            "_start": "2026-02-04T15:57:04.583417404Z",
+            "_stop": "2026-02-04T16:07:04.583417404Z",
+            "_field": "distanceCm",
+            "_measurement": "symera/telemetry/tv-001/dng-006",
+            "channelId": "ABC",
+            "uniq": "b9ca0862-8c64-47f6-b9af-2f8822ecbd25",
+            "userPseudoId": "tv-001-dng-006",
+            "_value": 38
+        },
+        {
+            "result": "_result",
+            "table": 0,
+            "_start": "2026-02-04T15:57:04.583417404Z",
+            "_stop": "2026-02-04T16:07:04.583417404Z",
+            "_field": "distanceCm",
+            "_measurement": "symera/telemetry/tv-001/dng-006",
+            "channelId": "ABC",
+            "uniq": "cfcb7320-06c0-4fa3-a384-cdc05c0503a2",
+            "userPseudoId": "tv-001-dng-006",
+            "_value": 150
+        },
+...
+
+curl --location 'http://localhost:3001/dwell/?userPseudoId=tv-001-dng-006&channelId=ABC'
+
+{
+    "totalDwellTimeMs": 41057,
+    "userPseudoId": "tv-001-dng-006",
+    "channelId": "ABC"
+}
+
+curl --location 'http://localhost:3001/switches/?userPseudoId=tv-001-dng-006'
+
+{
+    "result": 27
+}
+
+```

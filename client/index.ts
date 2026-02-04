@@ -59,20 +59,13 @@ const formatMessage = (
 const mqttBroker = (id: number) => {
   let seq = 0;
   const tvId = `tv-00${id}`;
-  const dongleId = `dng-${randomNumberBetween(1, 100)}`;
+  const dongleId = `dng-00${randomNumberBetween(0, 9)}`;
   const client = broker.connect({
     host: 'test.mosquitto.org',
     port: 1883,
     clientId: tvId,
   });
   client.on('connect', () => {
-    console.log(
-      `
-    Connection established successfully!
-    tvId: ${tvId},
-    dongleId: ${dongleId}\n\n\
-    `,
-    );
     if (client.connected === true) {
       setInterval(
         () =>
@@ -88,10 +81,10 @@ const mqttBroker = (id: number) => {
               seq++,
             ),
           ),
-        randomNumberBetween(100, 3600),
+        randomNumberBetween(2000, 6000),
       );
     }
   });
 };
 
-[...Array(5)].forEach((_, index) => mqttBroker(index + 1));
+[...Array(3)].forEach((_, index) => mqttBroker(index + 1));

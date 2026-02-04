@@ -12,21 +12,25 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const constroller_1 = require("./constroller");
 require("./mqtt/client");
 const http = require("http");
-http.createServer((req, res) => __awaiter(void 0, void 0, void 0, function* () {
+http
+    .createServer((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { url, method } = req;
     switch (method) {
         case 'GET':
-            if (url === '/presence') {
-                const { userPseudoId, channelId } = require('url').parse(req.url, true).query;
-                yield (0, constroller_1.DwellTimePerChannel)(res, userPseudoId, channelId);
+            if (url === null || url === void 0 ? void 0 : url.includes('/all')) {
+                yield (0, constroller_1.allRecentMeasurements)(res);
             }
-            else if (url === '/dwell') {
-                const { userPseudoId, channelId } = require('url').parse(req.url, true).query;
-                yield (0, constroller_1.DwellTimePerChannel)(res, userPseudoId, channelId);
+            else if (url === null || url === void 0 ? void 0 : url.includes('/presence')) {
+                const { userPseudoId, threshold } = require('url').parse(req.url, true).query;
+                yield (0, constroller_1.measurementsWithinPresence)(res, userPseudoId, threshold);
             }
-            else if (url === '/switches') {
+            else if (url === null || url === void 0 ? void 0 : url.includes('/dwell')) {
                 const { userPseudoId, channelId } = require('url').parse(req.url, true).query;
-                yield (0, constroller_1.DwellTimePerChannel)(res, userPseudoId, channelId);
+                yield (0, constroller_1.dwellTimePerChannel)(res, userPseudoId, channelId);
+            }
+            else if (url === null || url === void 0 ? void 0 : url.includes('/switches')) {
+                const { userPseudoId } = require('url').parse(req.url, true).query;
+                yield (0, constroller_1.countChannelSwitches)(res, userPseudoId);
             }
             else
                 res.end();
@@ -34,4 +38,6 @@ http.createServer((req, res) => __awaiter(void 0, void 0, void 0, function* () {
         default:
             console.log('Method not recognized');
     }
-})).listen(3000, () => console.log('Server running on port 3000'));
+}))
+    // .listen(3001, () => console.log('Server running on port 3001'));
+    .listen(3002, () => console.log('Server running on port 3001'));

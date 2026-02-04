@@ -8,6 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var _a, _b;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.bucket = exports.org = void 0;
 const node_crypto_1 = require("node:crypto");
@@ -15,8 +16,8 @@ const broker = require("mqtt");
 const influx_1 = require("../db/influx");
 const message_1 = require("../validators/message");
 const influxdb_client_1 = require("@influxdata/influxdb-client");
-exports.org = 'Filippo';
-exports.bucket = 'uwb_telemetry_db';
+exports.org = (_a = process.env.DOCKER_INFLUXDB_INIT_ORG) !== null && _a !== void 0 ? _a : 'symera';
+exports.bucket = (_b = process.env.DOCKER_INFLUXDB_INIT_BUCKET) !== null && _b !== void 0 ? _b : 'uwb_telemetry_db';
 const writeClient = influx_1.default.getWriteApi(exports.org, exports.bucket, 'ns');
 exports.default = (() => {
     const clientId = 'tvId-consumer';
@@ -26,7 +27,6 @@ exports.default = (() => {
         clientId,
     });
     client.on('connect', () => {
-        console.log('Connection established successfully!');
         client.subscribe('symera/telemetry/#', (err) => {
             if (err) {
                 client.end();
@@ -38,7 +38,7 @@ exports.default = (() => {
     client.on('message', (topic, message) => __awaiter(void 0, void 0, void 0, function* () {
         const { value, error } = message_1.message_schema.validate(JSON.parse(message.toString()));
         if (error) {
-            console.log({ error });
+            console.error({ error });
             return;
         }
         try {
@@ -56,17 +56,11 @@ exports.default = (() => {
                 .intField('distanceCm', value.distanceCm)
                 .intField('rssi', value.rssi)
                 .intField('seq', value.seq);
-            // https://github.com/Symera-Wesuite/uwb-telemetry-pipeline-assignment?tab=readme-ov-file#1-presence
-            // .booleanField('present', value.distanceCm <= threshold);
             yield writeClient.writePoint(point);
             yield writeClient.flush();
         }
         catch (error) {
-            console.log({ error });
+            console.error({ error });
         }
-        // TEST
-        // await testQuery(topic);
-        // await testDwellTimePerChannel(value.userPseudoId, value.channelId);
-        // await testCountChannelSwitches(value.userPseudoId);
     }));
 })();

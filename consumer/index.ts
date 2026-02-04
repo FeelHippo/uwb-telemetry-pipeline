@@ -1,4 +1,9 @@
-import { DwellTimePerChannel } from './constroller';
+import {
+  allRecentMeasurements,
+  countChannelSwitches,
+  dwellTimePerChannel,
+  measurementsWithinPresence,
+} from './constroller';
 import './mqtt/client';
 import * as http from 'http';
 
@@ -7,28 +12,27 @@ http
     const { url, method } = req;
     switch (method) {
       case 'GET':
-        if (url === '/presence') {
+        if (url?.includes('/all')) {
+          await allRecentMeasurements(res);
+        } else if (url?.includes('/presence')) {
+          const { userPseudoId, threshold } = require('url').parse(
+            req.url,
+            true,
+          ).query;
+          await measurementsWithinPresence(res, userPseudoId, threshold);
+        } else if (url?.includes('/dwell')) {
           const { userPseudoId, channelId } = require('url').parse(
             req.url,
             true,
           ).query;
-          await DwellTimePerChannel(res, userPseudoId, channelId);
-        } else if (url === '/dwell') {
-          const { userPseudoId, channelId } = require('url').parse(
-            req.url,
-            true,
-          ).query;
-          await DwellTimePerChannel(res, userPseudoId, channelId);
-        } else if (url === '/switches') {
-          const { userPseudoId, channelId } = require('url').parse(
-            req.url,
-            true,
-          ).query;
-          await DwellTimePerChannel(res, userPseudoId, channelId);
+          await dwellTimePerChannel(res, userPseudoId, channelId);
+        } else if (url?.includes('/switches')) {
+          const { userPseudoId } = require('url').parse(req.url, true).query;
+          await countChannelSwitches(res, userPseudoId);
         } else res.end();
         break;
       default:
         console.log('Method not recognized');
     }
   })
-  .listen(3000, () => console.log('Server running on port 3000'));
+  .listen(3001, () => console.log('Server running on port 3001'));

@@ -5,56 +5,59 @@ services:
     restart: unless-stopped
     ports:
       - "1883:1883"
-    networks:
-      - monitoring
     volumes:
       - ./mosquitto/config:/mosquitto/config
       - ./mosquitto/data:/mosquitto/data
       - ./mosquitto/log:/mosquitto/log
+  # https://community.iotawatt.com/t/getting-started-with-influxdb-and-grafana-using-docker-compose/4981
   influxdb:
-    image: influxdb
+    image: influxdb:latest
     container_name: influxdb
-    restart: always
+    restart: unless-stopped
     ports:
-      - "8086:8086"
-    networks:
-      - monitoring
+      - '8086:8086'
     volumes:
-      - influxdb-data:/var/lib/influxdb2
-      - influxdb-config:/etc/influxdb2
+      - influxdb_data:/var/lib/influxdb2
     environment:
       - DOCKER_INFLUXDB_INIT_MODE=setup
-      - DOCKER_INFLUXDB_INIT_USERNAME=user
-      - DOCKER_INFLUXDB_INIT_PASSWORD=password1234
+      - DOCKER_INFLUXDB_INIT_USERNAME=feelhippo
+      - DOCKER_INFLUXDB_INIT_PASSWORD=VeryLongPassword123!
       - DOCKER_INFLUXDB_INIT_ORG=symera
       - DOCKER_INFLUXDB_INIT_BUCKET=uwb_telemetry_db
-      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=I-Px4mxWr5qBERAzlZUPnYsu6XbAEYYZnUfxHN755w3yAqTupUVKqWa-6fq0S-FkUt7Mz3KRkjHNTA-bBEOkPw==
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=5J0CC86lbJT1KktGQ1X_16xNvClElpZWrjkI71D66ZAmkg_EHXMwtVz1sSTXLFLH9AZFt8Ltu4iZim0pCzQNlg==
+      - DOCKER_INFLUXDB_INIT_RETENTION=1h
 
   grafana:
     image: grafana/grafana
-    container_name: grafana
-    restart: always
-    ports:
-      - "3000:3000"
-    networks:
-      - monitoring
-    volumes:
-      - ./grafana-provisioning:/etc/grafana/provisioning
-      - grafana-data:/var/lib/grafana
+    container_name: grafana-server
+    restart: unless-stopped
     depends_on:
       - influxdb
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin1234  #change the password
+      - GF_INSTALL_PLUGINS=
+    links:
+      - influxdb
+    ports:
+      - '43000:3000'
+    volumes:
+      - grafana_data:/var/lib/grafana
   client:
     build: ./client
     depends_on:
       - mosquitto
   consumer:
     build: ./consumer
+    ports:
+      - "3001:3001"
+    environment:
+      - DOCKER_INFLUXDB_INIT_ORG=symera
+      - DOCKER_INFLUXDB_INIT_BUCKET=uwb_telemetry_db
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=5J0CC86lbJT1KktGQ1X_16xNvClElpZWrjkI71D66ZAmkg_EHXMwtVz1sSTXLFLH9AZFt8Ltu4iZim0pCzQNlg==
     depends_on:
-      - client
-networks:
-  monitoring:
+      - influxdb
 
 volumes:
-  grafana-data:
-  influxdb-data:
-  influxdb-config:
+  grafana_data:
+  influxdb_data:
