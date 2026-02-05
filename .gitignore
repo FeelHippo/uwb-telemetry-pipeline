@@ -1,3 +1,4 @@
 mosquitto/config/passwd
-client/dist/*
+client/dist
+consumer/dist
 */node_modules
