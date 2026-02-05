@@ -101,45 +101,43 @@ curl --location 'http://localhost:3001/all'
         },
 ...
 
-curl --location 'http://localhost:3001/presence/?userPseudoId=tv-001-dng-006&threshold=150'
+curl --location 'http://localhost:3001/presence/?userPseudoId=tv-001-dng-005&threshold=150'
 
 {
     "result": [
         {
             "result": "_result",
             "table": 0,
-            "_start": "2026-02-04T15:57:04.583417404Z",
-            "_stop": "2026-02-04T16:07:04.583417404Z",
+            "_start": "2026-02-05T20:48:27.542110054Z",
+            "_stop": "2026-02-05T20:58:27.542110054Z",
             "_field": "distanceCm",
-            "_measurement": "symera/telemetry/tv-001/dng-006",
+            "_measurement": "symera/telemetry/tv-001/dng-005",
             "channelId": "ABC",
-            "uniq": "b9ca0862-8c64-47f6-b9af-2f8822ecbd25",
-            "userPseudoId": "tv-001-dng-006",
-            "_value": 38
+            "uniq": "45b7ece3-b82d-4e28-b634-696318a1fd30",
+            "userPseudoId": "tv-001-dng-005",
+            "_value": 10
         },
         {
             "result": "_result",
             "table": 0,
-            "_start": "2026-02-04T15:57:04.583417404Z",
-            "_stop": "2026-02-04T16:07:04.583417404Z",
+            "_start": "2026-02-05T20:48:27.542110054Z",
+            "_stop": "2026-02-05T20:58:27.542110054Z",
             "_field": "distanceCm",
-            "_measurement": "symera/telemetry/tv-001/dng-006",
+            "_measurement": "symera/telemetry/tv-001/dng-005",
             "channelId": "ABC",
-            "uniq": "cfcb7320-06c0-4fa3-a384-cdc05c0503a2",
-            "userPseudoId": "tv-001-dng-006",
-            "_value": 150
+            "uniq": "ccefe865-2ccb-4d2f-97ac-eeca28935407",
+            "userPseudoId": "tv-001-dng-005",
+            "_value": 78
         },
 ...
 
-curl --location 'http://localhost:3001/dwell/?userPseudoId=tv-001-dng-006&channelId=ABC'
+curl --location 'http://localhost:3001/dwell/?userPseudoId=tv-001-dng-005&channelId=ABC'
 
 {
-    "totalDwellTimeMs": 41057,
-    "userPseudoId": "tv-001-dng-006",
-    "channelId": "ABC"
+    "result": 504204
 }
 
-curl --location 'http://localhost:3001/switches/?userPseudoId=tv-001-dng-006'
+curl --location 'http://localhost:3001/switches/?userPseudoId=tv-001-dng-005'
 
 {
     "result": 27

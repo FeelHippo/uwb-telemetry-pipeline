@@ -52,7 +52,7 @@ const allRecentMeasurements = (res) => __awaiter(void 0, void 0, void 0, functio
 exports.allRecentMeasurements = allRecentMeasurements;
 /**
  *
- * Return all measurements from within a threshold
+ * Return all measurements from within a threshold for a user
  *
  * @param res: ServerResponse
  * @param userPseudoId: string
@@ -65,10 +65,10 @@ const measurementsWithinPresence = (res, userPseudoId, threshold) => __awaiter(v
     try {
         let queryClient = influx_1.default.getQueryApi(client_1.org);
         let fluxQuery = `from(bucket: "${client_1.bucket}")
- |> range(start: -10m)
+ |> range(start: -6h)
  |> filter(fn: (r) => r.userPseudoId == "${userPseudoId}")
- |> filter(fn: (r) => r["_field"] == "distanceCm")
- |> filter(fn: (r) => r["_value"] <= ${threshold})
+ |> filter(fn: (r) => r._field == "distanceCm")
+ |> filter(fn: (r) => r._value <= ${threshold})
  |> sort(columns: ["dongleId", "seq"])
  |> mean()
  |> group()`;
@@ -115,7 +115,7 @@ const dwellTimePerChannel = (res, userPseudoId, channelId) => __awaiter(void 0, 
     try {
         let queryClient = influx_1.default.getQueryApi(client_1.org);
         let fluxQuery = `from(bucket: "${client_1.bucket}")
-    |> range(start: -10m)
+    |> range(start: -6h)
     |> filter(fn: (r) => r.userPseudoId == "${userPseudoId}")
     |> sort(columns: ["dongleId", "seq"])`;
         let result = [];
@@ -135,7 +135,11 @@ const dwellTimePerChannel = (res, userPseudoId, channelId) => __awaiter(void 0, 
                     const current = result[index];
                     const previous = result[index - 1];
                     // let's consider the time elapsed between the previous measurement and the current one
-                    // this needs fine tuning. TODO(Filippo)
+                    // by moving the condition in here instead of the Flux query
+                    // we can consider the time NOT spent on a particular channel
+                    // e.g.: | channel_1 | channel_1 | channel_2 | channel_2 | channel_1 | channel_1
+                    //       ~~~~~~~~~~~~~~~~~~~~~~~~                         ~~~~~~~~~~~~~~~~~~~~~~
+                    // this needs fine tuning. TODO(Filippo).
                     if ([current['channelId'], previous['channelId']].every((id) => channelId == id)) {
                         total +=
                             new Date(current['_time']).getTime() -
@@ -144,9 +148,7 @@ const dwellTimePerChannel = (res, userPseudoId, channelId) => __awaiter(void 0, 
                 }
                 res.writeHead(200, { 'Content-Type': 'application/json' });
                 return res.end(JSON.stringify({
-                    totalDwellTimeMs: total,
-                    userPseudoId,
-                    channelId,
+                    result: total,
                 }));
             },
         });
@@ -172,9 +174,9 @@ const countChannelSwitches = (res, userPseudoId) => __awaiter(void 0, void 0, vo
     try {
         let queryClient = influx_1.default.getQueryApi(client_1.org);
         let fluxQuery = `from(bucket: "${client_1.bucket}")
-    |> range(start: -24h)
-    |> filter(fn: (r) => r["userPseudoId"] == "${userPseudoId}")
-    |> filter(fn: (r) => r["_field"] == "channelId")
+    |> range(start: -6h)
+    |> filter(fn: (r) => r.userPseudoId == "${userPseudoId}")
+    |> filter(fn: (r) => r._field == "channelId")
     |> sort(columns: ["dongleId", "seq"])
     |> unique(column: "_value")
     |> count()`;

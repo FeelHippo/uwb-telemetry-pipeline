@@ -48,7 +48,7 @@ export const allRecentMeasurements = async (res: ServerResponse) => {
 
 /**
  *
- * Return all measurements from within a threshold
+ * Return all measurements from within a threshold for a user
  *
  * @param res: ServerResponse
  * @param userPseudoId: string
@@ -65,10 +65,10 @@ export const measurementsWithinPresence = async (
   try {
     let queryClient = influxClient.getQueryApi(org);
     let fluxQuery = `from(bucket: "${bucket}")
- |> range(start: -10m)
+ |> range(start: -6h)
  |> filter(fn: (r) => r.userPseudoId == "${userPseudoId}")
- |> filter(fn: (r) => r["_field"] == "distanceCm")
- |> filter(fn: (r) => r["_value"] <= ${threshold})
+ |> filter(fn: (r) => r._field == "distanceCm")
+ |> filter(fn: (r) => r._value <= ${threshold})
  |> sort(columns: ["dongleId", "seq"])
  |> mean()
  |> group()`;
@@ -124,7 +124,7 @@ export const dwellTimePerChannel = async (
   try {
     let queryClient = influxClient.getQueryApi(org);
     let fluxQuery = `from(bucket: "${bucket}")
-    |> range(start: -10m)
+    |> range(start: -6h)
     |> filter(fn: (r) => r.userPseudoId == "${userPseudoId}")
     |> sort(columns: ["dongleId", "seq"])`;
 
@@ -165,9 +165,7 @@ export const dwellTimePerChannel = async (
         res.writeHead(200, { 'Content-Type': 'application/json' });
         return res.end(
           JSON.stringify({
-            totalDwellTimeMs: total,
-            userPseudoId,
-            channelId,
+            result: total,
           }),
         );
       },
@@ -196,9 +194,9 @@ export const countChannelSwitches = async (
   try {
     let queryClient = influxClient.getQueryApi(org);
     let fluxQuery = `from(bucket: "${bucket}")
-    |> range(start: -24h)
-    |> filter(fn: (r) => r["userPseudoId"] == "${userPseudoId}")
-    |> filter(fn: (r) => r["_field"] == "channelId")
+    |> range(start: -6h)
+    |> filter(fn: (r) => r.userPseudoId == "${userPseudoId}")
+    |> filter(fn: (r) => r._field == "channelId")
     |> sort(columns: ["dongleId", "seq"])
     |> unique(column: "_value")
     |> count()`;

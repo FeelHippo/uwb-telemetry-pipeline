@@ -23,7 +23,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "dfcceo8niyigwd"
+        "uid": "ffccux6r8k2yod"
       },
       "description": "Unique userPseudoId present per 5 minutes",
       "fieldConfig": {
@@ -105,7 +105,7 @@
       "pluginVersion": "12.3.2",
       "targets": [
         {
-          "query": "from(bucket: \"uwb_telemetry_db\")\n|> range(start: -1h)\n|> filter(fn: (r) => r._field == \"userPseudoId\")\n|> aggregateWindow(\n    column: \"userPseudoId\",\n    every: 5m,\n    fn: (column, tables=<-) => tables\n      |> distinct(column: \"userPseudoId\")\n      |> count()\n  )",
+          "query": "from(bucket: \"uwb_telemetry_db\")\n|> range(start: -1h)\n|> filter(fn: (r) => r._field == \"userPseudoId\")\n|> group(columns: [\"userPseudoId\", \"_stop\"])\n|> aggregateWindow(\n    column: \"userPseudoId\",\n    every: 5m,\n    fn: (column, tables=<-) => tables\n      |> distinct(column: \"_value\")\n      |> count()\n  )",
           "refId": "A"
         }
       ],
@@ -115,47 +115,13 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "dfcceo8niyigwd"
+        "uid": "ffccux6r8k2yod"
       },
       "description": "Switches per hour",
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "palette-classic"
-          },
-          "custom": {
-            "axisBorderShow": false,
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "barWidthFactor": 0.6,
-            "drawStyle": "line",
-            "fillOpacity": 0,
-            "gradientMode": "none",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "insertNulls": false,
-            "lineInterpolation": "linear",
-            "lineWidth": 1,
-            "pointSize": 5,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "showPoints": "auto",
-            "showValues": false,
-            "spanNulls": false,
-            "stacking": {
-              "group": "A",
-              "mode": "none"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
+            "mode": "thresholds"
           },
           "mappings": [],
           "thresholds": {
@@ -182,34 +148,45 @@
       },
       "id": 3,
       "options": {
+        "displayMode": "gradient",
         "legend": {
           "calcs": [],
           "displayMode": "list",
           "placement": "bottom",
-          "showLegend": true
+          "showLegend": false
         },
-        "tooltip": {
-          "hideZeros": false,
-          "mode": "single",
-          "sort": "none"
-        }
+        "maxVizHeight": 300,
+        "minVizHeight": 16,
+        "minVizWidth": 8,
+        "namePlacement": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "sizing": "auto",
+        "valueMode": "color"
       },
       "pluginVersion": "12.3.2",
       "targets": [
         {
-          "query": "from(bucket: \"uwb_telemetry_db\")\n|> range(start: -6h)\n|> filter(fn: (r) => r._field == \"channelId\")\n|> group(columns: [\"channelId\"])\n|> aggregateWindow(\n    column: \"channelId\",\n    every: 1h,\n    fn: (column, tables=<-) => tables\n      |> count()\n  )\n|> fill(column: \"_value\", usePrevious: true)\n|> difference()  ",
+          "query": "from(bucket: \"uwb_telemetry_db\")\n|> range(start: -6h)\n|> filter(fn: (r) => r._field == \"channelId\")\n|> group(columns: [\"channelId\"])\n|> aggregateWindow(\n    column: \"channelId\",\n    every: 1h,\n    fn: (column, tables=<-) => tables\n      |> count()\n  )\n|> fill(column: \"_value\", usePrevious: true)\n|> difference()",
           "refId": "A"
         }
       ],
       "title": "Channel Switching Rate",
-      "type": "timeseries"
+      "type": "bargauge"
     },
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "dfcceo8niyigwd"
+        "uid": "ffccux6r8k2yod"
       },
-      "description": "Stacked by channel",
+      "description": "Stacked by channel or per TV",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -299,7 +276,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "dfcceo8niyigwd"
+        "uid": "ffccux6r8k2yod"
       },
       "description": "Today / last 24h",
       "fieldConfig": {
@@ -360,7 +337,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "dfcceo8niyigwd"
+            "uid": "ffccux6r8k2yod"
           },
           "query": "from(bucket: \"uwb_telemetry_db\")\n|> range(start: -24h)\n|> filter(fn: (r) => r._field == \"channelId\")\n|> group(columns: [\"channelId\"])\n|> aggregateWindow(\n    column: \"channelId\",\n    every: 1h,\n    fn: (column, tables=<-) => tables\n      |> count()\n  )",
           "refId": "A"
@@ -383,6 +360,6 @@
   "timepicker": {},
   "timezone": "browser",
   "title": "Symera",
-  "uid": "ad4hrjv",
+  "uid": "admxlsm",
   "version": 7
 }
