@@ -2781,3 +2781,127 @@ To fix this, use `chmod 0700 /mosquitto/config/passwd`.
 1770223148: mosquitto version 2.1.0 running
 1770223895: mosquitto version 2.1.0 terminating
 1770223895: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770279055: mosquitto version 2.1.0 starting
+1770279055: Config loaded from /mosquitto/config/mosquitto.conf.
+1770279055: Bridge support available.
+1770279055: Persistence support available.
+1770279055: TLS support available.
+1770279055: TLS-PSK support available.
+1770279055: Websockets support available.
+1770279055: Warning: File /mosquitto/config/passwd has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/passwd`.
+
+1770279055: Warning: File /mosquitto/config/passwd owner is not mosquitto. Future versions will refuse to load this file.To fix this, use `chown mosquitto /mosquitto/config/passwd`.
+
+1770279055: Warning: File /mosquitto/config/passwd group is not mosquitto. Future versions will refuse to load this file.
+
+1770279055: Plugin builtin-security has registered to receive 'basic-auth' events.
+1770279055: Opening ipv4 listen socket on port 1883.
+1770279055: Opening ipv6 listen socket on port 1883.
+1770279055: Opening ipv4 listen socket on port 9001.
+1770279055: Opening ipv6 listen socket on port 9001.
+1770279055: mosquitto version 2.1.0 running
+1770280227: mosquitto version 2.1.0 starting
+1770280227: Config loaded from /mosquitto/config/mosquitto.conf.
+1770280227: Bridge support available.
+1770280227: Persistence support available.
+1770280227: TLS support available.
+1770280227: TLS-PSK support available.
+1770280227: Websockets support available.
+1770280227: Warning: File /mosquitto/config/passwd has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/passwd`.
+
+1770280227: Warning: File /mosquitto/config/passwd owner is not mosquitto. Future versions will refuse to load this file.To fix this, use `chown mosquitto /mosquitto/config/passwd`.
+
+1770280227: Warning: File /mosquitto/config/passwd group is not mosquitto. Future versions will refuse to load this file.
+
+1770280227: Plugin builtin-security has registered to receive 'basic-auth' events.
+1770280227: Opening ipv4 listen socket on port 1883.
+1770280227: Opening ipv6 listen socket on port 1883.
+1770280227: Opening ipv4 listen socket on port 9001.
+1770280227: Opening ipv6 listen socket on port 9001.
+1770280227: mosquitto version 2.1.0 running
+1770280494: mosquitto version 2.1.0 terminating
+1770280494: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770280604: mosquitto version 2.1.0 starting
+1770280604: Config loaded from /mosquitto/config/mosquitto.conf.
+1770280604: Bridge support available.
+1770280604: Persistence support available.
+1770280604: TLS support available.
+1770280604: TLS-PSK support available.
+1770280604: Websockets support available.
+1770280604: Warning: File /mosquitto/config/passwd has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/passwd`.
+
+1770280604: Warning: File /mosquitto/config/passwd owner is not mosquitto. Future versions will refuse to load this file.To fix this, use `chown mosquitto /mosquitto/config/passwd`.
+
+1770280604: Warning: File /mosquitto/config/passwd group is not mosquitto. Future versions will refuse to load this file.
+
+1770280604: Plugin builtin-security has registered to receive 'basic-auth' events.
+1770280604: Opening ipv4 listen socket on port 1883.
+1770280604: Opening ipv6 listen socket on port 1883.
+1770280604: Opening ipv4 listen socket on port 9001.
+1770280604: Opening ipv6 listen socket on port 9001.
+1770280604: mosquitto version 2.1.0 running
+1770280844: mosquitto version 2.1.0 starting
+1770280844: Config loaded from /mosquitto/config/mosquitto.conf.
+1770280844: Bridge support available.
+1770280844: Persistence support available.
+1770280844: TLS support available.
+1770280844: TLS-PSK support available.
+1770280844: Websockets support available.
+1770280844: Warning: File /mosquitto/config/passwd has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/passwd`.
+
+1770280844: Warning: File /mosquitto/config/passwd owner is not mosquitto. Future versions will refuse to load this file.To fix this, use `chown mosquitto /mosquitto/config/passwd`.
+
+1770280844: Warning: File /mosquitto/config/passwd group is not mosquitto. Future versions will refuse to load this file.
+
+1770280844: Plugin builtin-security has registered to receive 'basic-auth' events.
+1770280844: Opening ipv4 listen socket on port 1883.
+1770280844: Opening ipv6 listen socket on port 1883.
+1770280844: Opening ipv4 listen socket on port 9001.
+1770280844: Opening ipv6 listen socket on port 9001.
+1770280844: mosquitto version 2.1.0 running
+1770282643: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770284444: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770286245: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770288046: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770289847: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770291648: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770293449: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770295250: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770297051: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770298852: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770300653: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770302454: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770304255: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770306056: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770311271: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770311510: mosquitto version 2.1.0 terminating
+1770311510: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770311517: mosquitto version 2.1.0 starting
+1770311517: Config loaded from /mosquitto/config/mosquitto.conf.
+1770311517: Bridge support available.
+1770311517: Persistence support available.
+1770311517: TLS support available.
+1770311517: TLS-PSK support available.
+1770311517: Websockets support available.
+1770311517: Warning: File /mosquitto/config/passwd has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/passwd`.
+
+1770311517: Warning: File /mosquitto/config/passwd owner is not mosquitto. Future versions will refuse to load this file.To fix this, use `chown mosquitto /mosquitto/config/passwd`.
+
+1770311517: Warning: File /mosquitto/config/passwd group is not mosquitto. Future versions will refuse to load this file.
+
+1770311517: Plugin builtin-security has registered to receive 'basic-auth' events.
+1770311517: Opening ipv4 listen socket on port 1883.
+1770311517: Opening ipv6 listen socket on port 1883.
+1770311517: Opening ipv4 listen socket on port 9001.
+1770311517: Opening ipv6 listen socket on port 9001.
+1770311517: mosquitto version 2.1.0 running
+1770313317: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770315118: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770316919: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770318720: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1770320521: Saving in-memory database to /mosquitto/data//mosquitto.db.

@@ -147,7 +147,11 @@ export const dwellTimePerChannel = async (
           const current = result[index];
           const previous = result[index - 1];
           // let's consider the time elapsed between the previous measurement and the current one
-          // this needs fine tuning. TODO(Filippo)
+          // by moving the condition in here instead of the Flux query
+          // we can consider the time NOT spent on a particular channel
+          // e.g.: | channel_1 | channel_1 | channel_2 | channel_2 | channel_1 | channel_1
+          //       ~~~~~~~~~~~~~~~~~~~~~~~~                         ~~~~~~~~~~~~~~~~~~~~~~
+          // this needs fine tuning. TODO(Filippo).
           if (
             [current['channelId'], previous['channelId']].every(
               (id: string) => channelId == id,

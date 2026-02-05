@@ -26,23 +26,18 @@ services:
       - DOCKER_INFLUXDB_INIT_BUCKET=uwb_telemetry_db
       - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=5J0CC86lbJT1KktGQ1X_16xNvClElpZWrjkI71D66ZAmkg_EHXMwtVz1sSTXLFLH9AZFt8Ltu4iZim0pCzQNlg==
       - DOCKER_INFLUXDB_INIT_RETENTION=1h
+  # https://www.influxdata.com/blog/getting-started-influxdb-grafana/
 
   grafana:
-    image: grafana/grafana
+    image: grafana/grafana:latest
     container_name: grafana-server
     restart: unless-stopped
     depends_on:
       - influxdb
-    environment:
-      - GF_SECURITY_ADMIN_USER=admin
-      - GF_SECURITY_ADMIN_PASSWORD=admin1234  #change the password
-      - GF_INSTALL_PLUGINS=
     links:
       - influxdb
     ports:
-      - '43000:3000'
-    volumes:
-      - grafana_data:/var/lib/grafana
+      - '3000:3000'
   client:
     build: ./client
     depends_on:
@@ -59,5 +54,4 @@ services:
       - influxdb
 
 volumes:
-  grafana_data:
   influxdb_data:
