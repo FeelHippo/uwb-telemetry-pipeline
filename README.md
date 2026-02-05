@@ -2,36 +2,20 @@
 
 #### Docker Compose and Mosquitto Set Up
 
-A simple Docker image can be run as follows:
-
-```bash
-docker run -d \
-  --name mosquitto \
-  -p 1883:1883 \
-  -v $(pwd)/mosquitto/config:/mosquitto/config \
-  -v $(pwd)/mosquitto/data:/mosquitto/data \
-  -v $(pwd)/mosquitto/log:/mosquitto/log \
-  eclipse-mosquitto:latest
-```
-
-If you run this project locally, don't forget to start your daemons:
+- start your daemons:
 
 ```bash
 sudo systemctl start docker
 sudo systemctl start influxdb
 ```
 
-This project uses [Docker Compose](https://docs.docker.com/compose/) to orchestrate the various containers required for this application.
-
-To simulate a real life scenario, this project requires authentication:
+- set up authentication:
 
 ```bash
 docker exec -it mosquitto mosquitto_passwd -c /mosquitto/config/passwd username
 ```
 
-The password file gets stored in your mounted config volume, so it persists between container restarts.
-
-Check if everything is fine with the password file:
+- double check password file:
 
 ```bash
 mosquitto -c ./mosquitto/config/mosquitto.conf
@@ -41,7 +25,7 @@ chown root:root mosquitto/config/passwd
 chmod 777 mosquitto/config/passwd
 ```
 
-Start the project:
+- run the project:
 
 ```bash
 docker system prune -a
@@ -144,3 +128,52 @@ curl --location 'http://localhost:3001/switches/?userPseudoId=tv-001-dng-005'
 }
 
 ```
+
+## Assignment Overview
+
+- [Problem Statement](https://github.com/Symera-Wesuite/uwb-telemetry-pipeline-assignment?tab=readme-ov-file#1-problem-statement)
+
+- [Requirements](https://github.com/Symera-Wesuite/uwb-telemetry-pipeline-assignment?tab=readme-ov-file#2-requirements)
+
+- Architecture: [Local First](https://github.com/Symera-Wesuite/uwb-telemetry-pipeline-assignment?tab=readme-ov-file#option-1-local-first-preferred)
+
+## ETL / Processing
+
+- Basic Ingestion
+  - Subscribe to MQTT topics
+    - [client](https://github.com/FeelHippo/uwb-telemetry-pipeline/blob/3128eaa6769d44dec24d663855c3e64e0fac31b0/client/index.ts#L63)
+    - [consumer](https://github.com/FeelHippo/uwb-telemetry-pipeline/blob/3128eaa6769d44dec24d663855c3e64e0fac31b0/consumer/mqtt/client.ts#L17)
+  - [Validate schema](https://github.com/FeelHippo/uwb-telemetry-pipeline/blob/main/consumer/validators/message.ts)
+  - [Write raw events into InfluxDB](https://github.com/FeelHippo/uwb-telemetry-pipeline/blob/3128eaa6769d44dec24d663855c3e64e0fac31b0/consumer/mqtt/client.ts#L44)
+- Derived Metrics (see [backup Flux queries](https://github.com/FeelHippo/uwb-telemetry-pipeline/blob/main/grafana_dashboard/backup_grafana.md))
+  - [presence](https://github.com/FeelHippo/uwb-telemetry-pipeline/blob/3128eaa6769d44dec24d663855c3e64e0fac31b0/consumer/constroller/index.ts#L60)
+  - [dwell](https://github.com/FeelHippo/uwb-telemetry-pipeline/blob/3128eaa6769d44dec24d663855c3e64e0fac31b0/consumer/constroller/index.ts#L119)
+  - [switches](https://github.com/FeelHippo/uwb-telemetry-pipeline/blob/3128eaa6769d44dec24d663855c3e64e0fac31b0/consumer/constroller/index.ts#L190)
+- Handling Real-World Issues
+  - [duplication](https://github.com/FeelHippo/uwb-telemetry-pipeline/blob/3128eaa6769d44dec24d663855c3e64e0fac31b0/consumer/mqtt/client.ts#L45)
+  - [Out-of-order](https://github.com/FeelHippo/uwb-telemetry-pipeline/blob/3128eaa6769d44dec24d663855c3e64e0fac31b0/consumer/constroller/index.ts#L75)
+- Grafana Dashboard
+  - [exported JSON](https://github.com/FeelHippo/uwb-telemetry-pipeline/blob/main/grafana_dashboard/grafana-dashboard.json)
+  - [backup Flux queries](https://github.com/FeelHippo/uwb-telemetry-pipeline/blob/main/grafana_dashboard/backup_grafana.md)
+- Simulation Requirements
+  - [client](https://github.com/FeelHippo/uwb-telemetry-pipeline/blob/main/client/index.ts) emulates the following:
+    - [Multiple TVs: 2–3](https://github.com/FeelHippo/uwb-telemetry-pipeline/blob/3128eaa6769d44dec24d663855c3e64e0fac31b0/client/index.ts#L90)
+    - [Multiple dongles: 3–10](https://github.com/FeelHippo/uwb-telemetry-pipeline/blob/3128eaa6769d44dec24d663855c3e64e0fac31b0/client/index.ts#L62)
+    - [Multiple users: pseudonymous](https://github.com/FeelHippo/uwb-telemetry-pipeline/blob/3128eaa6769d44dec24d663855c3e64e0fac31b0/client/index.ts#L77)
+  - Channel Changes: random
+  - Distance Patterns: random
+  - Output Rate: [configurable](https://github.com/FeelHippo/uwb-telemetry-pipeline/blob/3128eaa6769d44dec24d663855c3e64e0fac31b0/client/index.ts#L84)
+- Deliverables:
+  - [docker-compose.yml](https://github.com/FeelHippo/uwb-telemetry-pipeline/blob/main/docker-compose.yml)
+  - [ETL service source code](https://github.com/FeelHippo/uwb-telemetry-pipeline/tree/main/consumer)
+  - [ Simulator source code](https://github.com/FeelHippo/uwb-telemetry-pipeline/tree/main/client)
+  - [Grafana dashboard export JSON](https://github.com/FeelHippo/uwb-telemetry-pipeline/blob/main/grafana_dashboard/grafana-dashboard.json)
+- [readme.md](https://github.com/FeelHippo/uwb-telemetry-pipeline/tree/main)
+
+### Notes
+- throughout the project you will find comments and links that provide:
+  - explanations
+  - reasoning
+  - external links to sources
+  - todo's
+- NO AI was used to work on this project. I've never used AI coding tools, and never will. 
