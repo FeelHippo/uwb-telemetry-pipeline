@@ -33,6 +33,8 @@ http
         break;
       default:
         console.log('Method not recognized');
+        res.writeHead(500, { 'Content-Type': 'application/json' });
+        return res.end(JSON.stringify({ message: 'Method not recognized' }));
     }
   })
   .listen(3001, () => console.log('Server running on port 3001'));
